@@ -21,14 +21,14 @@
   height: 2rem;
 }
 .section-localisation p {
-  padding-left: 2rem;
+  margin-left: 2rem;
 }
 
 .section-reservation {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 25rem;
+  height: 55rem;
   margin: 0 auto;
 }
 .section-reservation-container {
@@ -37,9 +37,18 @@
   justify-content: center;
   gap: 25rem;
   flex-wrap: wrap;
+  padding: 2rem;
 }
-.section-reservation-menu > :not(:last-child) {
+@media (max-width: 774px) {
+  .section-reservation-container {
+    gap: 3rem;
+  }
+}
+.section-reservation-menu-title {
   margin-bottom: 2rem;
+}
+.section-reservation-menu p {
+  margin-bottom: 3rem;
 }
 .section-reservation-menu-btn {
   text-decoration: none;
@@ -48,9 +57,12 @@
   padding: 1.3rem;
   border-radius: 5rem 5rem;
   font-weight: 600;
+  margin-top: 3rem;
 }
 .section-reservation-fonc {
-  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 .section-reservation-fonc-title {
   margin-bottom: 3rem;
@@ -58,11 +70,67 @@
 .section-reservation-fonc-btn {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 1.5rem;
+  padding: 0.8rem;
+  border-radius: 1rem;
+}
+.section-reservation-fonc-btn:not(:last-child) {
+  margin-bottom: 2rem;
+}
+.section-reservation-fonc-btn-num {
+  margin-right: 1.5rem;
+}
+.section-reservation-fonc-btn-num:nth-child(2) {
+  padding-right: 1.6rem;
+}
+
+.section-restaurants {
+  height: 30rem;
+}
+.section-restaurants h2 {
+  text-align: center;
+  margin-top: 4rem;
+}
+.section-restaurants-container {
+  padding: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  width: 100%;
+}
+.section-restaurants-container-one {
+  width: 45rem;
+  border-radius: 2rem;
+  box-shadow: 5px 13px 32px -19px #000000;
+}
+.section-restaurants-container-one-img {
+  width: 45rem;
+  height: 25rem;
+  background-image: url("../../public/img/restaurants/la-palette-de-gout.jpg");
+  background-size: cover;
+  object-fit: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.section-restaurants-container-one-text {
+  position: relative;
+  padding: 2rem 1.5rem;
+}
+.section-restaurants-container-one-text i {
+  position: absolute;
+  top: 50%;
+  left: 90%;
 }
 
 html {
   font-size: 75%;
+}
+
+body {
+  font-family: var(--font-texts);
 }
 
 *, :before, :after {
