@@ -1,0 +1,51 @@
+.section-reservation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 25rem;
+  margin: 0 auto;
+
+  &-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25rem;
+    flex-wrap: wrap;
+  }
+  &-menu {
+
+    & > :not(:last-child) {
+      margin-bottom: 2rem;
+
+    }
+  &-title {
+  }
+
+  p {
+
+  }
+
+    &-btn {
+      text-decoration: none;
+      color: #FFF;
+      background-color:#FF79DA;
+      padding: 1.3rem;
+      border-radius: 5rem 5rem ;
+      font-weight: 600;
+    }
+  }
+
+  &-fonc {
+    padding: 1rem 2rem;
+    &-title {
+      margin-bottom: 3rem;
+    }
+
+    &-btn {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+  }
+}

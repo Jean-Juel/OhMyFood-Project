@@ -1,0 +1,16 @@
+.section-localisation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  background-color:  #99E2D0;
+  height: 4rem;
+  svg {
+    width: 1.5rem;
+    height: 2rem;
+  }
+
+  p {
+    padding-left: 2rem;
+  }
+}

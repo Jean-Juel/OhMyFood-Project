@@ -1,0 +1,14 @@
+{
+  "name": "ohmyfood-project",
+  "version": "1.0.0",
+  "description": "Réservez le menu qui vous convient",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch scss/main.scss:public/css/style.css"
+  },
+  "author": "Vicktor-Juhel",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.54.9"
+  }
+}
