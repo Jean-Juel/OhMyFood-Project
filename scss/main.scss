@@ -1,10 +1,22 @@
-//Layouts
-@import "layouts/header.scss";
-@import "layouts/section-localisation";
-@import "layouts/section-reservation";
-@import "layouts/section-restaurants";
-
 //Utilitises
 @import "utilities/home";
 @import "utilities/mixin";
 @import "utilities/variables";
+
+
+//Base
+@import "base/animations";
+@import 'base/button';
+
+//Pages
+@import 'pages/footer';
+@import "pages/header";
+
+//layouts
+@import "layouts/menu";
+
+//Layouts accueil
+@import "layouts/accueil/section-localisation";
+@import "layouts/accueil/section-reservation";
+@import "layouts/accueil/section-restaurants";
+

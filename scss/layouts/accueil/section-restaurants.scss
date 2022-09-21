@@ -1,0 +1,97 @@
+.section-restaurants {
+  height: auto;
+
+  h2 {
+    text-align: center;
+    margin-top: 4rem;
+  }
+
+  &-container {
+    padding: 6.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    max-width: 90%;
+    margin: 0 auto;
+
+
+    @media (min-width: 1700px) {
+      max-width: 100%;
+    }
+
+    &-one:nth-child(1) &-one-img {
+      background-image: url("../../../public/img/restaurants/la-palette-de-gout.jpg");
+
+    }
+
+    &-one:nth-child(2) &-one-img {
+      background-image: url("../../../public/img/restaurants/la-note-enchante.jpg");
+    }
+
+    &-one:nth-child(3) &-one-img {
+      background-image: url("../../../public/img/restaurants/la-francaise.jpg");
+    }
+
+    &-one:nth-child(4) &-one-img {
+      background-image: url("../../../public/img/restaurants/les-delices-du-sens.jpg");
+
+    }
+
+    &-one {
+      width: 45rem;
+      border-radius: 2rem;
+      box-shadow: 5px 13px 32px -19px #000000;
+      overflow: hidden;
+
+
+
+        &-img {
+          width: 45rem;
+          height: 25rem;
+          background-size: cover;
+          object-fit: cover;
+          background-repeat: no-repeat;
+          background-position: center;
+
+          .img-1 {
+            background-image: url("../../../public/img/restaurants/la-palette-de-gout.jpg");
+          }
+
+          .img-2 {
+          }
+
+          .img-3 {
+            background-image: url("../../../public/img/restaurants/la-francaise.jpg");
+
+          }
+
+          .img-4 {
+            background-image: url("../../../public/img/restaurants/les-delices-du-sens.jpg");
+          }
+        }
+
+    &-text {
+      position: relative;
+      padding: 2rem 1.5rem;
+
+         a {
+           display: inline-block;
+
+           .test i {
+             background-color: #9356DC;
+           }
+           i {
+             text-decoration: none;
+             color: black;
+             position: absolute;
+             top: 50%;
+             left: 90%;
+
+           }
+         }
+      }
+    }
+  }
+}

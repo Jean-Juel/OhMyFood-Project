@@ -1,0 +1,30 @@
+.header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 6.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 50;
+    background-color: white;
+    box-shadow: 0px 10px 13px -7px #000000, 12px 50px 50px -20px rgba(0,0,0,0);
+
+    &-container {
+        position: relative;
+        padding: 4.5rem;
+        img {
+        }
+
+    }
+
+    a {
+        color: inherit;
+        //float: left;
+        position: absolute;
+        transform: translate(-50%,-50%);
+        top: 50%;
+        left: 3.5%;
+    }
+
+}

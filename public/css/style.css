@@ -1,132 +1,5 @@
-.header {
-  width: 100%;
-  height: 6.5rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.header-container {
-  padding: 4.5rem;
-}
-.section-localisation {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto;
-  background-color: #99E2D0;
-  height: 4rem;
-}
-.section-localisation svg {
-  width: 1.5rem;
-  height: 2rem;
-}
-.section-localisation p {
-  margin-left: 2rem;
-}
-
-.section-reservation {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 55rem;
-  margin: 0 auto;
-}
-.section-reservation-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 25rem;
-  flex-wrap: wrap;
-  padding: 2rem;
-}
-@media (max-width: 774px) {
-  .section-reservation-container {
-    gap: 3rem;
-  }
-}
-.section-reservation-menu-title {
-  margin-bottom: 2rem;
-}
-.section-reservation-menu p {
-  margin-bottom: 3rem;
-}
-.section-reservation-menu-btn {
-  text-decoration: none;
-  color: #FFF;
-  background-color: #FF79DA;
-  padding: 1.3rem;
-  border-radius: 5rem 5rem;
-  font-weight: 600;
-  margin-top: 3rem;
-}
-.section-reservation-fonc {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-}
-.section-reservation-fonc-title {
-  margin-bottom: 3rem;
-}
-.section-reservation-fonc-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1.5rem;
-  padding: 0.8rem;
-  border-radius: 1rem;
-}
-.section-reservation-fonc-btn:not(:last-child) {
-  margin-bottom: 2rem;
-}
-.section-reservation-fonc-btn-num {
-  margin-right: 1.5rem;
-}
-.section-reservation-fonc-btn-num:nth-child(2) {
-  padding-right: 1.6rem;
-}
-
-.section-restaurants {
-  height: 30rem;
-}
-.section-restaurants h2 {
-  text-align: center;
-  margin-top: 4rem;
-}
-.section-restaurants-container {
-  padding: 2.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 2rem;
-  width: 100%;
-}
-.section-restaurants-container-one {
-  width: 45rem;
-  border-radius: 2rem;
-  box-shadow: 5px 13px 32px -19px #000000;
-}
-.section-restaurants-container-one-img {
-  width: 45rem;
-  height: 25rem;
-  background-image: url("../../public/img/restaurants/la-palette-de-gout.jpg");
-  background-size: cover;
-  object-fit: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-.section-restaurants-container-one-text {
-  position: relative;
-  padding: 2rem 1.5rem;
-}
-.section-restaurants-container-one-text i {
-  position: absolute;
-  top: 50%;
-  left: 90%;
-}
-
 html {
-  font-size: 75%;
+  font-size: 62.5%;
 }
 
 body {
@@ -137,6 +10,501 @@ body {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+
+.title-big-big {
+  font-weight: 500;
+  font-family: "Roboto", sans-serif;
+  font-size: 6rem;
+}
+
+.title-big {
+  font-weight: 500;
+  font-family: "Roboto", sans-serif;
+  font-size: 3.6rem;
+}
+
+.title-big-white {
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  font-size: 3.6rem;
+}
+
+.title-medium {
+  font-weight: 500;
+  font-family: "Roboto", sans-serif;
+  font-size: 2.4rem;
+}
+
+.title-medium-less {
+  font-family: "Roboto", sans-serif;
+  font-size: 2rem;
+}
+
+.title-medium-less-less {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.4rem;
+}
+
+.text-medium-more {
+  font-family: "Poppins", sans-serif;
+  font-size: 2.2rem;
+  letter-spacing: -0.4px;
+}
+
+.text-medium-less {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.2rem;
+}
+
+.text-medium {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.4rem;
+}
+
+.xl-margin-bottom {
+  margin-bottom: 9rem;
+}
+
+.u-margin-bottom {
+  margin-bottom: 6rem;
+}
+
+.l-margin-bottom {
+  margin-bottom: 4rem;
+}
+
+.s-margin-bottom {
+  margin-bottom: 2rem;
+}
+
+.u-size {
+  font-size: 2.4rem;
+}
+
+.l-size {
+  font-size: 2rem;
+}
+
+.m-size {
+  font-size: 1.6rem;
+}
+
+.s-size {
+  font-size: 1.2rem;
+}
+
+@keyframes check {
+  from {
+    width: 0;
+  }
+  25% {
+    width: 25%;
+  }
+  50% {
+    width: 50%;
+  }
+  75% {
+    width: 50%;
+  }
+  100% {
+    width: 50%;
+  }
+}
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2.3rem auto 4.3rem;
+  color: #ffffff;
+  background: -webkit-gradient(linear, right bottom, left top, from(#9356DC), to(#FF79DA));
+  background: -o-linear-gradient(bottom right, #9356DC, #FF79DA);
+  background: linear-gradient(to top left, #9356DC, #FF79DA);
+  -webkit-box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
+  text-align: center;
+  padding: 1rem;
+  border: none;
+  border-radius: 5rem;
+  cursor: pointer;
+  width: 20rem;
+  height: 5rem;
+  -webkit-transition: opacity 1s;
+  -o-transition: opacity 1s;
+  transition: opacity 1s;
+}
+.btn:hover {
+  opacity: 0.5;
+  -webkit-box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.4);
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.4);
+}
+.btn a {
+  text-decoration: none;
+  color: white;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  height: 20rem;
+  width: 100%;
+  background-color: #231F20;
+  padding: 2rem;
+}
+.footer-title {
+  font-weight: bolder;
+  color: white;
+}
+.footer-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.footer-nav :not(:last-child) {
+  margin-bottom: 0.7rem;
+}
+.footer-nav a {
+  font-weight: 500;
+  font-size: 1.4rem;
+  color: #fff;
+  text-decoration: none;
+}
+.footer-nav i {
+  margin-right: 0.3rem;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 6.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 50;
+  background-color: white;
+  box-shadow: 0px 10px 13px -7px #000000, 12px 50px 50px -20px rgba(0, 0, 0, 0);
+}
+.header-container {
+  position: relative;
+  padding: 4.5rem;
+}
+.header a {
+  color: inherit;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 3.5%;
+}
+
+.main-container {
+  max-width: 90rem;
+  margin: 0 auto;
+}
+.main-container-hero {
+  width: 100%;
+  height: 48rem;
+}
+.main-container .section-menu {
+  position: relative;
+  width: 100%;
+  background-color: white;
+  display: inline-block;
+}
+.main-container .section-menu-title {
+  position: absolute;
+  top: -8rem;
+  width: 100%;
+  border-radius: 7rem 7rem 0 0;
+  background-color: white;
+  padding: 3rem;
+}
+.main-container .section-menu-article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2rem;
+  background-color: white;
+  gap: 2rem;
+  margin: 0 auto;
+}
+.main-container .section-menu-article h2 {
+  position: relative;
+  text-transform: uppercase;
+  font-size: 1.8rem;
+}
+.main-container .section-menu-article h2:before {
+  content: "";
+  position: absolute;
+  top: 110%;
+  left: 0;
+  width: 5rem;
+  height: 0.4rem;
+  background-color: lightgreen;
+  border-radius: 0.2rem;
+}
+.main-container .section-menu-article-choice {
+  position: relative;
+  padding: 1.4rem;
+  width: 100%;
+  text-align: start;
+  box-shadow: 0px 10px 13px -7px #000000, 12px 50px 50px -20px rgba(0, 0, 0, 0);
+  border-radius: 1.5rem;
+  overflow: hidden;
+}
+.main-container .section-menu-article-choice h3 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.main-container .section-menu-article-choice:hover p .span-money {
+  transform: translateX(-270%);
+}
+.main-container .section-menu-article-choice:hover .hidden {
+  width: 8rem;
+  visibility: visible;
+}
+.main-container .section-menu-article-choice:hover .hidden .span-money {
+  transition: all 1s;
+}
+.main-container .section-menu-article-choice:hover .hidden i {
+  transform: rotate(360deg);
+}
+.main-container .section-menu-article-choice:hover .hidden p span {
+  transition: all 1s;
+}
+.main-container .section-menu-article-choice .hidden {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: green;
+  width: 0;
+  height: 100%;
+  visibility: hidden;
+  transition: all 0.5s;
+}
+.main-container .section-menu-article-choice .hidden .check i {
+  color: #fff;
+  transition-duration: 0.5s;
+}
+.main-container .section-menu-article-choice h3 {
+  text-overflow: ellipsis;
+}
+.main-container .section-menu-article-choice p {
+  text-overflow: ellipsis;
+}
+.main-container .section-menu-article-choice .span-money {
+  font-weight: 600;
+  float: right;
+  font-size: 1.6rem;
+  transition: all 0.4s;
+}
+
+.section-localisation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  background-color: #F8F5F1;
+  height: 4rem;
+}
+.section-localisation svg {
+  width: 1.5rem;
+  height: 2rem;
+}
+.section-localisation p {
+  margin-left: 2rem;
+}
+.section-localisation .paris {
+  font-weight: 500;
+}
+
+.section-reservation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  margin: 0 auto;
+}
+.section-reservation-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 2rem;
+  width: 100rem;
+}
+@media (max-width: 774px) {
+  .section-reservation-container {
+    gap: 3rem;
+  }
+}
+.section-reservation-menu {
+  text-align: center;
+}
+.section-reservation-menu-title {
+  margin-bottom: 2rem;
+}
+.section-reservation-menu p {
+  margin-bottom: 3rem;
+}
+.section-reservation-menu-btn {
+  -webkit-box-shadow: 0px 10px 13px -7px #000000, 12px 20px 0px -20px rgba(0, 0, 0, 0);
+  box-shadow: 0px 10px 13px -7px #000000, 12px 20px 0px -20px rgba(0, 0, 0, 0);
+}
+.section-reservation-menu-btn {
+  text-decoration: none;
+  color: #FFF;
+  background-color: #FF79DA;
+  padding: 1.3rem;
+  border-radius: 5rem 5rem;
+  font-weight: 600;
+  margin-top: 3rem;
+}
+.section-reservation-fonc-container {
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  flex-wrap: wrap;
+  width: 90rem;
+}
+.section-reservation-fonc-container-title h2 {
+  padding: 2rem;
+}
+.section-reservation-fonc-container-btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 0.8rem;
+  border-radius: 1rem;
+  width: 33%;
+}
+.section-reservation-fonc-container-btn p {
+  font-weight: 600;
+}
+.section-reservation-fonc-container-btn:before {
+  content: "";
+  position: absolute;
+  width: 28rem;
+  height: 5rem;
+  z-index: -2;
+  left: 10%;
+  -webkit-box-shadow: 0px 10px 13px -7px #000000, 12px 20px 0px -20px rgba(0, 0, 0, 0);
+  box-shadow: 0px 10px 13px -7px #000000, 12px 20px 0px -20px rgba(0, 0, 0, 0);
+  border-radius: 2rem;
+}
+.section-reservation-fonc-container-btn:nth-child(2) {
+  margin-right: 0.9rem;
+}
+.section-reservation-fonc-container-btn:not(:last-child) {
+  margin: 0 0.22rem;
+}
+.section-reservation-fonc-container-btn-num {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #FFF;
+  width: 2rem;
+  height: 2.3rem;
+  font-weight: 500;
+  border-radius: 100%;
+  background-color: #9356DC;
+  margin-right: 0.5rem;
+}
+.section-reservation-fonc-container-btn .fa-mobile-screen-button {
+  color: grey;
+  font-size: 1.5rem;
+}
+.section-reservation-fonc-container-btn .fa-list-ul {
+  color: grey;
+}
+.section-reservation-fonc-container-btn .fa-store {
+  color: grey;
+}
+
+.section-restaurants {
+  height: auto;
+}
+.section-restaurants h2 {
+  text-align: center;
+  margin-top: 4rem;
+}
+.section-restaurants-container {
+  padding: 6.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  max-width: 90%;
+  margin: 0 auto;
+}
+@media (min-width: 1700px) {
+  .section-restaurants-container {
+    max-width: 100%;
+  }
+}
+.section-restaurants-container-one:nth-child(1) .section-restaurants-container-one-img {
+  background-image: url("../../../public/img/restaurants/la-palette-de-gout.jpg");
+}
+.section-restaurants-container-one:nth-child(2) .section-restaurants-container-one-img {
+  background-image: url("../../../public/img/restaurants/la-note-enchante.jpg");
+}
+.section-restaurants-container-one:nth-child(3) .section-restaurants-container-one-img {
+  background-image: url("../../../public/img/restaurants/la-francaise.jpg");
+}
+.section-restaurants-container-one:nth-child(4) .section-restaurants-container-one-img {
+  background-image: url("../../../public/img/restaurants/les-delices-du-sens.jpg");
+}
+.section-restaurants-container-one {
+  width: 45rem;
+  border-radius: 2rem;
+  box-shadow: 5px 13px 32px -19px #000000;
+  overflow: hidden;
+}
+.section-restaurants-container-one-img {
+  width: 45rem;
+  height: 25rem;
+  background-size: cover;
+  object-fit: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.section-restaurants-container-one-img .img-1 {
+  background-image: url("../../../public/img/restaurants/la-palette-de-gout.jpg");
+}
+.section-restaurants-container-one-img .img-3 {
+  background-image: url("../../../public/img/restaurants/la-francaise.jpg");
+}
+.section-restaurants-container-one-img .img-4 {
+  background-image: url("../../../public/img/restaurants/les-delices-du-sens.jpg");
+}
+.section-restaurants-container-one-text {
+  position: relative;
+  padding: 2rem 1.5rem;
+}
+.section-restaurants-container-one-text a {
+  display: inline-block;
+}
+.section-restaurants-container-one-text a .test i {
+  background-color: #9356DC;
+}
+.section-restaurants-container-one-text a i {
+  text-decoration: none;
+  color: black;
+  position: absolute;
+  top: 50%;
+  left: 90%;
 }
 
 /*# sourceMappingURL=style.css.map */
