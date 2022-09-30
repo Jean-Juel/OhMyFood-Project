@@ -13,6 +13,20 @@
     <title>OhmyFood</title>
 </head>
 <body>
+    <div class="loader-container">
+       <section class="spinner-container">
+           <div class="spinner">
+               <span class="spinner__leter" letter="O">O</span>
+               <span class="spinner__leter" letter="h">h</span>
+               <span class="spinner__leter" letter="m">m</span>
+               <span class="spinner__leter" letter="y">y</span>
+               <span class="spinner__leter" letter="f">f</span>
+               <span class="spinner__leter" letter="o">o</span>
+               <span class="spinner__leter" letter="o">o</span>
+               <span class="spinner__leter" letter="d">d</span>
+           </div>
+       </section>
+    </div>
    <header class="header">
        <div class="header-container">
           <img src="../public/img/logo/ohmyfood@2x.svg" alt="Logo Ohmyfood">
@@ -21,8 +35,10 @@
 
    <main>
     <section class="section-localisation">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 256c-35.3 0-64-28.7-64-64s28.7-64 64-64s64 28.7 64 64s-28.7 64-64 64z"/></svg>
-        <p class="text-medium-more paris"> Paris, Belleville</p>
+        <div class="section-localisation-container">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 256c-35.3 0-64-28.7-64-64s28.7-64 64-64s64 28.7 64 64s-28.7 64-64 64z"/></svg>
+            <p class="text-medium-more paris"> Paris, Belleville</p>
+        </div>
     </section>
 
     <section class="section-reservation">
@@ -72,7 +88,10 @@
                 <div class="section-restaurants-container-one-text">
                     <h3 class="title-medium-less-less">La pallete du goût</h3>
                     <p class="text-medium-less">Ménilmontant</p>
-                    <a href="index-palette.html" target="_blank" class="test"><i class="fa-regular fa-heart heart fa-2xl test"></i></a>
+                    <a href="index-palette.html" target="_blank" class="test">
+                        <i class="fa-regular fa-heart heart fa-2xl"></i>
+                        <i class="fa-solid fa-heart fa-2xl"></i>
+                    </a>
                 </div>
             </div>
 
@@ -83,7 +102,10 @@
                 <div class="section-restaurants-container-one-text">
                     <h3 class="title-medium-less-less">La note enchantée</h3>
                     <p class="text-medium-less">Charonne</p>
-                    <a href="index-enchante.html" target="_blank" class="test"><i class="fa-regular fa-heart heart fa-2xl test"></i></a>
+                    <a href="index-enchante.html" target="_blank" class="test">
+                        <i class="fa-regular fa-heart heart fa-2xl"></i>
+                        <i class="fa-solid fa-heart fa-2xl"></i>
+                    </a>
                 </div>
             </div>
 
@@ -94,7 +116,10 @@
                 <div class="section-restaurants-container-one-text">
                     <h3 class="title-medium-less-less">A la francaise</h3>
                     <p class="text-medium-less">Cité rouge</p>
-                    <a href="index-francaise.html" target="_blank" class="test"><i class="fa-regular fa-heart heart fa-2xl test"></i></a>
+                    <a href="index-francaise.html" target="_blank" class="test">
+                        <i class="fa-regular fa-heart heart fa-2xl"></i>
+                        <i class="fa-solid fa-heart fa-2xl"></i>
+                    </a>
                 </div>
             </div>
 
@@ -105,7 +130,10 @@
                 <div class="section-restaurants-container-one-text">
                     <h3 class="title-medium-less-less">Le délice des sens</h3>
                     <p class="text-medium-less">Folie-Méricourt</p>
-                    <a href="index-delice.html" target="_blank"><i class="fa-solid fa-heart fa-2xl"></i></a>
+                    <a href="index-delice.html" target="_blank">
+                        <i class="fa-regular fa-heart heart fa-2xl"></i>
+                        <i class="fa-solid fa-heart fa-2xl"></i>
+                    </a>
                 </div>
             </div>
         </div>
@@ -118,7 +146,8 @@
             <a href="#" class=""><i class="fa-sharp fa-solid fa-utensils"></i> Proposer un restaurant</a>
             <a href="#" class=""><i class="fa-sharp fa-solid fa-hand-holding-dollar"></i>Devenir partenaire</a>
             <a href="#">Mentions légales</a>
-            <a href="#">Contact</a>
+            <a onClick="javascript:window.open('mailto:v.juhel@gorilles.fr', 'my-window');event.preventDefault()"
+               href="mailto:v.juhel@gorilles.fr">Contact</a>
         </nav>
     </footer>
 </body>

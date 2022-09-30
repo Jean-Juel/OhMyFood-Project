@@ -1,5 +1,6 @@
 html {
   font-size: 62.5%;
+  color: #222;
 }
 
 body {
@@ -94,21 +95,36 @@ body {
   font-size: 1.2rem;
 }
 
+@keyframes fade {
+  from {
+    opacity: 1;
+  }
+  20% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
 @keyframes check {
   from {
     width: 0;
   }
-  25% {
-    width: 25%;
-  }
   50% {
-    width: 50%;
-  }
-  75% {
-    width: 50%;
+    width: 3rem;
   }
   100% {
-    width: 50%;
+    width: 6rem;
   }
 }
 .btn {
@@ -143,6 +159,94 @@ body {
   color: white;
 }
 
+.loader-container {
+  position: fixed;
+  z-index: 300;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  background-color: #99E2D0;
+  animation: fade 2s linear 0.1s forwards;
+}
+
+.spinner-container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(1.3);
+}
+
+.spinner-container .spinner {
+  font-size: 2em;
+}
+
+.spinner-container .spinner__leter {
+  font-weight: light;
+  position: relative;
+  color: rgba(188, 188, 188, 0.25);
+  text-transform: uppercase;
+}
+
+.spinner-container .spinner__leter:before {
+  content: attr(letter);
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #333;
+  animation: load-animation 2.8s infinite;
+  animation-fill-mode: backwards;
+  text-transform: uppercase;
+}
+
+.spinner-container .spinner__leter:nth-child(2):before {
+  animation-delay: 0.4s;
+}
+
+.spinner-container .spinner__leter:nth-child(3):before {
+  animation-delay: 0.8s;
+}
+
+.spinner-container .spinner__leter:nth-child(4):before {
+  animation-delay: 1.2s;
+}
+
+.spinner-container .spinner__leter:nth-child(5):before {
+  animation-delay: 1.6s;
+}
+
+.spinner-container .spinner__leter:nth-child(6):before {
+  animation-delay: 2s;
+}
+
+.spinner-container .spinner__leter:nth-child(7):before {
+  animation-delay: 2.4s;
+}
+
+.spinner-container .spinner__leter:nth-child(8):before {
+  animation-delay: 2.8s;
+}
+
+.spinner-container .spinner__leter:nth-child(9):before {
+  animation-delay: 3.2s;
+}
+
+.spinner-container .spinner__leter:nth-child(10):before {
+  animation-delay: 3.6s;
+}
+
+@keyframes load-animation {
+  0%, 80%, to {
+    transform: rotateY(-90deg);
+    opacity: 0;
+  }
+  5% {
+    opacity: 0.5;
+  }
+  20%, 50% {
+    transform: rotateY(0);
+    opacity: 1;
+  }
+}
 .footer {
   display: flex;
   flex-direction: column;
@@ -186,7 +290,7 @@ body {
   align-items: center;
   z-index: 50;
   background-color: white;
-  box-shadow: 0px 10px 13px -7px #000000, 12px 50px 50px -20px rgba(0, 0, 0, 0);
+  box-shadow: 10px 6px 15px -8px #000000;
 }
 .header-container {
   position: relative;
@@ -199,6 +303,11 @@ body {
   top: 50%;
   left: 3.5%;
 }
+@media (max-width: 50rem) {
+  .header a {
+    left: 6%;
+  }
+}
 
 .main-container {
   max-width: 90rem;
@@ -206,7 +315,8 @@ body {
 }
 .main-container-hero {
   width: 100%;
-  height: 48rem;
+  max-height: 48rem;
+  object-fit: cover;
 }
 .main-container .section-menu {
   position: relative;
@@ -221,6 +331,30 @@ body {
   border-radius: 7rem 7rem 0 0;
   background-color: white;
   padding: 3rem;
+}
+.main-container .section-menu-title a {
+  display: inline-block;
+}
+.main-container .section-menu-title a .fa-solid {
+  opacity: 0;
+}
+.main-container .section-menu-title a .fa-solid:hover, .main-container .section-menu-title a .fa-solid:active {
+  opacity: 1;
+  color: #FF79DA;
+}
+.main-container .section-menu-title a i {
+  text-decoration: none;
+  color: black;
+  position: absolute;
+  top: 50%;
+  left: 90%;
+  transform: scale(1.3);
+}
+@media (max-width: 34.375rem) {
+  .main-container .section-menu-title a i {
+    top: 40%;
+    left: 84%;
+  }
 }
 .main-container .section-menu-article {
   display: flex;
@@ -244,68 +378,62 @@ body {
   left: 0;
   width: 5rem;
   height: 0.4rem;
-  background-color: lightgreen;
+  background-color: #99E2D0;
   border-radius: 0.2rem;
 }
-.main-container .section-menu-article-choice {
-  position: relative;
-  padding: 1.4rem;
+.main-container .section-menu-article-container {
+  display: flex;
+  flex-direction: column;
   width: 100%;
-  text-align: start;
-  box-shadow: 0px 10px 13px -7px #000000, 12px 50px 50px -20px rgba(0, 0, 0, 0);
+}
+.main-container .section-menu-article-container-choice {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  box-shadow: 7px 3px 15px -8px #000000;
   border-radius: 1.5rem;
   overflow: hidden;
 }
-.main-container .section-menu-article-choice h3 {
+.main-container .section-menu-article-container-choice:checked {
+  width: 100%;
+  margin-right: 0;
+}
+.main-container .section-menu-article-container-choice input {
+  display: none;
+}
+.main-container .section-menu-article-container-choice-text {
+  padding-left: 1rem;
+}
+.main-container .section-menu-article-container-choice-text h3 {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-.main-container .section-menu-article-choice:hover p .span-money {
-  transform: translateX(-270%);
-}
-.main-container .section-menu-article-choice:hover .hidden {
-  width: 8rem;
-  visibility: visible;
-}
-.main-container .section-menu-article-choice:hover .hidden .span-money {
-  transition: all 1s;
-}
-.main-container .section-menu-article-choice:hover .hidden i {
-  transform: rotate(360deg);
-}
-.main-container .section-menu-article-choice:hover .hidden p span {
-  transition: all 1s;
-}
-.main-container .section-menu-article-choice .hidden {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-  position: absolute;
-  right: 0;
-  top: 0;
-  background-color: green;
-  width: 0;
-  height: 100%;
-  visibility: hidden;
-  transition: all 0.5s;
-}
-.main-container .section-menu-article-choice .hidden .check i {
-  color: #fff;
-  transition-duration: 0.5s;
-}
-.main-container .section-menu-article-choice h3 {
+.main-container .section-menu-article-container-choice-text p {
+  overflow: hidden;
   text-overflow: ellipsis;
 }
-.main-container .section-menu-article-choice p {
-  text-overflow: ellipsis;
-}
-.main-container .section-menu-article-choice .span-money {
+.main-container .section-menu-article-container-choice-price {
+  font-size: 1.4rem;
   font-weight: 600;
+  display: flex;
+  align-items: flex-end;
   float: right;
-  font-size: 1.6rem;
-  transition: all 0.4s;
+  margin-left: 46rem;
+}
+.main-container .section-menu-article-container-choice-check {
+  height: 7.4rem;
+  background-color: #99E2D0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 8rem;
+  margin-right: -9rem;
+}
+.main-container .section-menu-article-container-choice-check .fa-circle-check {
+  color: #fff;
 }
 
 .section-localisation {
@@ -314,17 +442,23 @@ body {
   justify-content: center;
   margin: 0 auto;
   background-color: #F8F5F1;
-  height: 4rem;
+  height: 5rem;
 }
-.section-localisation svg {
+.section-localisation-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.section-localisation-container svg {
   width: 1.5rem;
   height: 2rem;
 }
-.section-localisation p {
+.section-localisation-container p {
   margin-left: 2rem;
 }
-.section-localisation .paris {
+.section-localisation-container .paris {
   font-weight: 500;
+  padding: 1rem 0;
 }
 
 .section-reservation {
@@ -340,7 +474,7 @@ body {
   flex-direction: column;
   flex-wrap: wrap;
   padding: 2rem;
-  width: 100rem;
+  width: 94rem;
 }
 @media (max-width: 774px) {
   .section-reservation-container {
@@ -369,15 +503,30 @@ body {
   font-weight: 600;
   margin-top: 3rem;
 }
+.section-reservation-fonc h2 {
+  text-align: center;
+  padding: 2rem;
+}
+@media (max-width: 57.125rem) {
+  .section-reservation-fonc h2 {
+    text-align: start;
+    margin-left: 2.5rem;
+  }
+}
 .section-reservation-fonc-container {
   display: flex;
   align-items: start;
   justify-content: start;
   flex-wrap: wrap;
-  width: 90rem;
+  margin-left: -3rem;
 }
-.section-reservation-fonc-container-title h2 {
-  padding: 2rem;
+@media (max-width: 57.125rem) {
+  .section-reservation-fonc-container {
+    text-align: start;
+    gap: 3rem;
+    width: 100%;
+    margin-left: 0;
+  }
 }
 .section-reservation-fonc-container-btn {
   position: relative;
@@ -388,6 +537,31 @@ body {
   padding: 0.8rem;
   border-radius: 1rem;
   width: 33%;
+  cursor: pointer;
+}
+.section-reservation-fonc-container-btn:nth-child(2):hover:before {
+  left: 13%;
+  width: 27rem;
+}
+.section-reservation-fonc-container-btn:hover {
+  transform: scale(1.09);
+}
+.section-reservation-fonc-container-btn:hover i {
+  font-weight: 600;
+  color: #9356DC;
+}
+.section-reservation-fonc-container-btn:hover:before {
+  font-weight: 600;
+  background-color: #FF79DA;
+  opacity: 0.5;
+}
+@media (max-width: 57.125rem) {
+  .section-reservation-fonc-container-btn {
+    justify-content: start;
+    gap: 3rem;
+    width: 100%;
+    margin-left: 0;
+  }
 }
 .section-reservation-fonc-container-btn p {
   font-weight: 600;
@@ -399,9 +573,14 @@ body {
   height: 5rem;
   z-index: -2;
   left: 10%;
-  -webkit-box-shadow: 0px 10px 13px -7px #000000, 12px 20px 0px -20px rgba(0, 0, 0, 0);
-  box-shadow: 0px 10px 13px -7px #000000, 12px 20px 0px -20px rgba(0, 0, 0, 0);
+  box-shadow: 10px 6px 15px -8px #000000;
   border-radius: 2rem;
+}
+@media (max-width: 57.125rem) {
+  .section-reservation-fonc-container-btn:before {
+    left: 2%;
+    width: 98%;
+  }
 }
 .section-reservation-fonc-container-btn:nth-child(2) {
   margin-right: 0.9rem;
@@ -436,8 +615,9 @@ body {
   height: auto;
 }
 .section-restaurants h2 {
-  text-align: center;
+  text-align: left;
   margin-top: 4rem;
+  margin-left: 6.5rem;
 }
 .section-restaurants-container {
   padding: 6.5rem;
@@ -446,12 +626,12 @@ body {
   justify-content: center;
   flex-wrap: wrap;
   gap: 2rem;
-  max-width: 90%;
+  max-width: 100%;
   margin: 0 auto;
 }
-@media (min-width: 1700px) {
+@media (max-width: 37.5rem) {
   .section-restaurants-container {
-    max-width: 100%;
+    padding: 1.3rem;
   }
 }
 .section-restaurants-container-one:nth-child(1) .section-restaurants-container-one-img {
@@ -467,27 +647,54 @@ body {
   background-image: url("../../../public/img/restaurants/les-delices-du-sens.jpg");
 }
 .section-restaurants-container-one {
-  width: 45rem;
+  width: 24%;
   border-radius: 2rem;
   box-shadow: 5px 13px 32px -19px #000000;
   overflow: hidden;
+  cursor: pointer;
+}
+.section-restaurants-container-one:nth-child(1) .section-restaurants-container-one-img:before, .section-restaurants-container-one:nth-child(2) .section-restaurants-container-one-img:before {
+  content: "Nouveau";
+  position: absolute;
+  top: 10%;
+  left: 73%;
+  width: 8rem;
+  height: 3.5rem;
+  color: #171213;
+  background-color: #99E2D0;
+  font-size: 1.4rem;
+  padding: 1rem;
+  text-align: center;
+  font-family: sans-serif;
+  border-radius: 1rem;
+  font-weight: 400;
+}
+@media (max-width: 102rem) {
+  .section-restaurants-container-one {
+    width: 49%;
+  }
+}
+@media (max-width: 68.375rem) {
+  .section-restaurants-container-one {
+    width: 100%;
+  }
+}
+.section-restaurants-container-one:hover {
+  box-shadow: 8px 5px 13px -5px #000000;
 }
 .section-restaurants-container-one-img {
-  width: 45rem;
+  min-width: 45rem;
   height: 25rem;
   background-size: cover;
   object-fit: cover;
   background-repeat: no-repeat;
   background-position: center;
+  position: relative;
 }
-.section-restaurants-container-one-img .img-1 {
-  background-image: url("../../../public/img/restaurants/la-palette-de-gout.jpg");
-}
-.section-restaurants-container-one-img .img-3 {
-  background-image: url("../../../public/img/restaurants/la-francaise.jpg");
-}
-.section-restaurants-container-one-img .img-4 {
-  background-image: url("../../../public/img/restaurants/les-delices-du-sens.jpg");
+@media (max-width: 36rem) {
+  .section-restaurants-container-one-img {
+    min-width: auto;
+  }
 }
 .section-restaurants-container-one-text {
   position: relative;
@@ -496,8 +703,12 @@ body {
 .section-restaurants-container-one-text a {
   display: inline-block;
 }
-.section-restaurants-container-one-text a .test i {
-  background-color: #9356DC;
+.section-restaurants-container-one-text a .fa-solid {
+  opacity: 0;
+}
+.section-restaurants-container-one-text a .fa-solid:hover {
+  opacity: 1;
+  color: #FF79DA;
 }
 .section-restaurants-container-one-text a i {
   text-decoration: none;
@@ -505,6 +716,12 @@ body {
   position: absolute;
   top: 50%;
   left: 90%;
+}
+@media (max-width: 34.375rem) {
+  .section-restaurants-container-one-text a i {
+    top: 40%;
+    left: 84%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

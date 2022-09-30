@@ -31,33 +31,46 @@
         <section class="section-menu">
             <div class="section-menu-title">
                  <h1 class="title-big">A la Francaise</h1>
-                <label></label>
+                <a href="#">
+                    <i class="fa-regular fa-heart heart fa-2xl"></i>
+                    <i class="fa-solid fa-heart fa-2xl"></i>
+                </a>
             </div>
 
             <article class="section-menu-article" >
-                    <h2 class="text-big">Entrées</h2>
+                <h2 class="text-big">Entrées</h2>
 
-                <div class="section-menu-article-choice">
-                    <h3 class="title-medium">Tartare de poulpe acidulé</h3>
-                    <p class="text-medium">Aux zestes d'oranges<span class="span-money text-medium">25€</span></p>
-                    <div class="hidden">
-                        <span class="check"><i class="fa-regular fa-circle-check fa-2xl"></i></span>
+                <div class="section-menu-article-container">
+                        <label class="section-menu-article-container-choice" for="entree1">
+                            <input type="radio" id="entree1" value="1" name="entree">
+
+                            <div class="section-menu-article-container-choice-text">
+                                <h3 class="title-medium">Tartare de poulpe acidulé</h3>
+                                <p class="text-medium">Aux zestes d'oranges</p>
+                            </div>
+
+                            <div class="section-menu-article-container-choice-price">
+                                <span>25€</span>
+                            </div>
+
+                            <div class="section-menu-article-container-choice-check">
+                                <i class="fa-regular fa-circle-check fa-2xl"></i>
+                            </div>
+                        </label>
+
+
+                    <div class="section-menu-article-choice">
+                        <h3 class="title-medium">Velouté de légumes d'antan</h3>
+                        <p class="text-medium">Carotte, panais, topinambour<span class="span-money text-medium">35€</span></p>
+                            <span class="check"><i class="fa-regular fa-circle-check fa-2xl"></i></span>
                     </div>
-                </div>
 
-                <div class="section-menu-article-choice">
-                    <h3 class="title-medium">Velouté de légumes d'antan</h3>
-                    <p class="text-medium">Carotte, panais, topinambour<span class="span-money text-medium">35€</span></p>
-                    <div class="hidden">
-                        <span class="check"><i class="fa-regular fa-circle-check fa-2xl"></i></span>
-                    </div>
-                </div>
-
-                <div class="section-menu-article-choice">
-                    <h3 class="title-medium">Soupe à l'oignon</h3>
-                    <p class="text-medium">Revisitée<span class="span-money text-medium">20€</span></p>
-                    <div class="hidden">
-                        <span class="check"><i class="fa-regular fa-circle-check fa-2xl"></i></span>
+                    <div class="section-menu-article-choice">
+                        <h3 class="title-medium">Soupe à l'oignon</h3>
+                        <p class="text-medium">Revisitée<span class="span-money text-medium">20€</span></p>
+                        <div class="hidden">
+                            <span class="check"><i class="fa-regular fa-circle-check fa-2xl"></i></span>
+                        </div>
                     </div>
                 </div>
             </article>
@@ -68,7 +81,6 @@
                     <h3 class="title-medium">Coquilles Saint-Jacques</h3>
                     <p class="text-medium">Accompagnées d'une purée de panais<span class="span-money ">40€</span></p>
                     <div class="hidden">
-                        <span class="check"><i class="fa-regular fa-circle-check fa-2xl"></i></span>
                     </div>
                 </div>
 
@@ -76,7 +88,6 @@
                     <h3 class="title-medium">Magret de canard </h3>
                     <p class="text-medium">Et parmentier de pommes de terres<span class="span-money text-medium">35€</span></p>
                     <div class="hidden">
-                        <span class="check"><i class="fa-regular fa-circle-check fa-2xl"></i></span>
                     </div>
                 </div>
 
@@ -84,7 +95,6 @@
                     <h3 class="title-medium">Pigeonneau d'ille-et-Vilaine</h3>
                     <p class="text-medium">Sur son lit de gnocchis aux légumes<span class="span-money text-medium">44€</span></p>
                     <div class="hidden">
-                        <span class="check"><i class="fa-regular fa-circle-check fa-2xl"></i></span>
                     </div>
                 </div>
             </article>
@@ -94,8 +104,7 @@
                 <div class="section-menu-article-choice">
                     <h3 class="title-medium">Pétales de violettes glacés</h3>
                     <p class="text-medium">Et purée de noisettes<span class="span-money text-medium">18€</span></p>
-                    <div class="hidden">
-                        <span class="check"><i class="fa-regular fa-circle-check fa-2xl"></i></span>
+                    <div class="">
                     </div>
                 </div>
 
@@ -104,15 +113,14 @@
                     <p class="text-medium">Revisité
                         <span class="span-money text-medium">22€</span>
                     </p>
-                    <div class="hidden">
-                        <span class="check"><i class="fa-regular fa-circle-check fa-2xl"></i></span>
+                    <div class="">
                     </div>
                 </div>
 
                 <div class="section-menu-article-choice">
                     <h3 class="title-medium">Milllefeuille croustilant</h3>
                     <p class="text-medium">Myrilles et pâte d'amende<span class="span-money text-medium">23€</span></p>
-                    <div class="hidden">
+                    <div class="">
                         <span class="check"><i class="fa-regular fa-circle-check fa-2xl"></i></span>
                     </div>
 
@@ -132,7 +140,8 @@
                 <a href="#" class=""><i class="fa-sharp fa-solid fa-utensils"></i> Proposer un restaurant</a>
                 <a href="#" class=""><i class="fa-sharp fa-solid fa-hand-holding-dollar"></i>Devenir partenaire</a>
                 <a href="#">Mentions légales</a>
-                <a href="#">Contact</a>
+                <a onClick="javascript:window.open('mailto:v.juhel@gorilles.fr', 'my-window');event.preventDefault()"
+                   href="mailto:v.juhel@gorilles.fr">Contact</a>
             </nav>
         </footer>
 

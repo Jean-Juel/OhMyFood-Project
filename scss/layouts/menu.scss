@@ -5,7 +5,8 @@
 
   &-hero {
     width: 100%;
-    height: 48rem;
+    max-height: 48rem;
+    object-fit: cover;
   }
     .section-menu {
       position: relative;
@@ -21,6 +22,36 @@
         border-radius: 7rem 7rem 0 0;
         background-color: white;
         padding: 3rem;
+
+        a {
+          display: inline-block;
+
+
+          .fa-solid{
+            opacity: 0;
+
+
+            &:hover,&:active  {
+              opacity: 1;
+              color: $color-secondary;
+            }
+
+          }
+
+          i {
+            text-decoration: none;
+            color: black;
+            position: absolute;
+            top: 50%;
+            left: 90%;
+            transform: scale(1.3);
+
+            @media (max-width: 34.375rem) {
+              top: 40%;
+              left: 84%;
+            }
+          }
+        }
       }
 
       &-article {
@@ -45,87 +76,72 @@
             left: 0;
             width: 5rem;
             height: .4rem;
-            background-color: lightgreen;
+            background-color: #99E2D0;
             border-radius: .2rem;
-
           }
         }
 
-        &-choice {
-          position: relative;
-          padding: 1.4rem;
+        &-container {
+          display: flex;
+          flex-direction: column;
           width: 100%;
-          text-align: start;
-          box-shadow: 0px 10px 13px -7px #000000, 12px 50px 50px -20px rgba(0,0,0,0);
+
+          &-choice {
+          position: relative;
+          display: flex;
+            align-items: center;
+            justify-content: space-between;
+          width: 100%;
+          box-shadow: 7px 3px 15px -8px #000000;
           border-radius: 1.5rem;
           overflow: hidden;
 
-          h3 {
-            overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-          }
-
-
-          &:hover p .span-money {
-            transform: translateX(-270%);
-          }
-
-          &:hover .hidden {
-            width: 8rem;
-            visibility: visible;
-
-            .span-money {
-              transition: all 1s;
+            &:checked {
+              width: 100%;
+              margin-right: 0;
             }
 
-            i {
-              transform: rotate(360deg);
+            input {
+              display: none;
             }
 
-            p span {
-              transition: all 1s;
+            &-text {
+              padding-left: 1rem;
+              h3 {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+              }
+
+              p {
+                overflow: hidden;
+                text-overflow: ellipsis;
+              }
             }
 
-          }
+            &-price {
+              font-size: 1.4rem;
+              font-weight: 600;
+              display: flex;
+              align-items: flex-end;
+              float: right;
+              margin-left: 46rem;
+            }
 
-          .hidden {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 0 auto;
-            position: absolute;
-            right: 0;
-            top: 0;
-            background-color: green;
-            width: 0;
-            height: 100%;
-            visibility: hidden;
-            transition: all .5s;
+            &-check {
+              height: 7.4rem;
+              background-color: $color-tertiary;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              width: 8rem;
+              margin-right: -9rem;
 
-            .check {
-              i {
+              .fa-circle-check {
                 color: #fff;
-                transition-duration: .5s;
               }
             }
           }
-
-          h3 {
-            text-overflow: ellipsis;
-          }
-
-          p {
-            text-overflow: ellipsis;
-          }
-
-            .span-money {
-              font-weight: 600;
-              float: right;
-              font-size: 1.6rem;
-              transition: all .4s ;
-
-            }
         }
       }
     }

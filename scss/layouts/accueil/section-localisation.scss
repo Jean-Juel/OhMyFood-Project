@@ -4,15 +4,24 @@
   justify-content: center;
   margin: 0 auto;
   background-color:  #F8F5F1;
-  height: 4rem;
-  svg {
-    width: 1.5rem;
-    height: 2rem;
-  }
-  p {
-    margin-left: 2rem;
-  }
-  .paris {
-    font-weight: 500;
+  height: 5rem;
+
+  &-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+    svg {
+      width: 1.5rem;
+      height: 2rem;
+    }
+    p {
+      margin-left: 2rem;
+    }
+    .paris {
+      font-weight: 500;
+      padding: 1rem 0;
+    }
   }
 }

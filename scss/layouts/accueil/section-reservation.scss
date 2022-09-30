@@ -12,7 +12,8 @@
     flex-direction: column;
     flex-wrap: wrap;
     padding: 2rem;
-    width: 100rem;
+    width: 94rem;
+
 
     @media (max-width: 774px) {
       gap: 3rem;
@@ -48,15 +49,29 @@
 
 
   &-fonc {
+
+    h2  {
+      text-align: center;
+      padding: 2rem;
+
+      @media (max-width: 57.125rem) {
+        text-align: start;
+        margin-left: 2.5rem;
+      }
+    }
+
     &-container {
       display: flex;
       align-items: start;
       justify-content: start;
       flex-wrap: wrap;
-      width: 90rem;
+      margin-left: -3rem;
 
-      &-title h2{
-      padding: 2rem;
+      @media (max-width: 57.125rem) {
+        text-align: start;
+        gap: 3rem;
+        width: 100%;
+        margin-left: 0;
       }
 
       &-btn {
@@ -68,6 +83,33 @@
         padding: .8rem;
         border-radius: 1rem;
         width: 33%;
+        cursor: pointer;
+
+        &:nth-child(2):hover:before {
+          left: 13%;
+          width: 27rem;
+        }
+
+        &:hover {
+          transform: scale(1.09);
+        }
+
+        &:hover i {
+          font-weight: 600;
+          color: #9356DC;
+        }
+
+        &:hover:before {
+          font-weight: 600;
+          background-color: $color-secondary;
+          opacity: .5;
+        }
+        @media (max-width: 57.125rem) {
+          justify-content: start;
+          gap: 3rem;
+          width: 100%;
+          margin-left: 0;
+        }
 
         p {
           font-weight: 600;
@@ -81,9 +123,12 @@
           height: 5rem;
           z-index: -2;
           left: 10%;
-          -webkit-box-shadow: 0px 10px 13px -7px #000000, 12px 20px 0px -20px rgba(0, 0, 0, 0);
-          box-shadow: 0px 10px 13px -7px #000000, 12px 20px 0px -20px rgba(0, 0, 0, 0);
+          box-shadow:10px 6px 15px -8px #000000;
           border-radius: 2rem;
+          @media (max-width: 57.125rem) {
+            left: 2%;
+            width: 98%;
+          }
         }
 
         &:nth-child(2) {

@@ -11,7 +11,7 @@
 //1200 - 1800 = Desktop (normal size)
 //1800+ = Big-Desktop
 
-  //Breakpoint argument
+//Breakpoint argument
 //respond-phone
 //-tab-port
 //-tab-land
@@ -21,23 +21,23 @@
 
 @mixin respond($breakpoint) {
       @if $breakpoint == phone {
-      @media (max-width: 37.5rem) {
+      @media (max-width: 37.5em) {
         @content;
       }
     }
 
   @if $breakpoint == tab-port {
-    @media (max-width: 56.25rem) {
+    @media (max-width: 56.25em) {
       @content;
     }
   }
   @if $breakpoint == tab-land {
-    @media (max-width: 75rem) {
+    @media (max-width: 75em) {
       @content;
     }
   }
   @if $breakpoint == big-desktop {
-    @media (max-width: 112.5rem) {
+    @media (max-width: 112.5em) {
       @content;
     }
   }

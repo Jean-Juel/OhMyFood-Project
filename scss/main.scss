@@ -1,12 +1,12 @@
 //Utilitises
-@import "utilities/home";
 @import "utilities/mixin";
+@import "utilities/home";
 @import "utilities/variables";
 
-
 //Base
-@import "base/animations";
-@import 'base/button';
+@import "components/animations";
+@import 'components/button';
+@import 'components/loader';
 
 //Pages
 @import 'pages/footer';
