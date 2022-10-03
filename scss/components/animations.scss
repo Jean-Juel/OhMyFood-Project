@@ -22,14 +22,14 @@
 
 @keyframes check {
   from {
-    width: 0;
+    transform: rotateZ(100deg);
   }
 
   50% {
-    width: 3rem;
+    transform: rotateZ(-50deg);
   }
 
   100% {
-    width: 6rem;
+    transform: rotateZ(0deg);
   }
 }

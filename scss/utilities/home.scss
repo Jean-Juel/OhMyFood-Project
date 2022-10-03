@@ -2,6 +2,14 @@ html {
   font-size: 62.5%;
   color: #222;
 
+  @media (max-width: 55.5rem) {
+    font-size: 60%;
+  }
+
+  @media (max-width: 45.75rem) {
+    font-size: 56.5%;
+  }
+
 }
 
 body {
