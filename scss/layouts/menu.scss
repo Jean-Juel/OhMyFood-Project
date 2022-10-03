@@ -28,17 +28,13 @@
       a {
         display: inline-block;
 
-
-
         .fa-solid {
           opacity: 0;
-
 
           &:hover, &:active {
             opacity: 1;
             color: $color-secondary;
           }
-
         }
 
         i {
@@ -104,7 +100,6 @@
           transition: all .5s;
           cursor: pointer;
 
-
           input[type="radio"] {
             opacity: 0;
             position: absolute;
@@ -169,7 +164,6 @@
             margin-right: -9rem;
             transition: all .5s;
 
-
             .fa-circle-check {
               transition: all .5s;
               color: #F8F5F1;
@@ -177,7 +171,6 @@
           }
         }
       }
-
     }
   }
 }
