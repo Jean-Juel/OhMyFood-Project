@@ -1,10 +1,24 @@
-.section-restaurants {
+.restaurants {
   height: auto;
+  padding: 2rem;
+
+  @media (max-width: 24.34em) {
+    padding: 1rem;
+  }
 
   h2 {
     text-align: left;
     margin-top: 4rem;
-    margin-left: 6.5rem;
+    margin-left: 4.5rem;
+    padding: 2rem;
+
+    @media (max-width: 37.5em) {
+      margin-left: 0;
+    }
+
+    @media (max-width: 24.34em) {
+      padding: 1rem;
+    }
   }
 
   &-container {
@@ -45,6 +59,7 @@
       box-shadow: 5px 13px 32px -19px #000000;
       overflow: hidden;
       cursor: pointer;
+      position: relative;
 
       &:nth-child(1) &-img:before,&:nth-child(2) &-img:before {
         content: 'Nouveau';
@@ -61,7 +76,6 @@
         font-family: sans-serif;
         border-radius: 1rem;
         font-weight: 400;
-
       }
 
       @media  (max-width: 102rem) {
@@ -70,6 +84,10 @@
 
       @media (max-width: 68.375rem) {
         width: 100%;
+      }
+
+      @media (max-width: 24.8rem) {
+       height: 32rem;
       }
 
       &:hover {
@@ -83,7 +101,6 @@
           object-fit: cover;
           background-repeat: no-repeat;
           background-position: center;
-          position: relative;
 
           @media (max-width: 36rem) {
             min-width: auto;
@@ -96,7 +113,6 @@
 
          a {
            display: inline-block;
-
 
             .fa-solid{
             opacity: 0;
