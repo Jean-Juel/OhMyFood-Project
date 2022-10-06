@@ -38,15 +38,13 @@
           visibility: hidden;
         }
 
-        .fa-regular {
-        }
-
         input:checked ~ .fa-solid {
-          transform: scale(1.3);
-          color: $color-secondary;
+        opacity: 1;
         }
 
         .fa-solid {
+          opacity: 0;
+          color: $color-secondary;
         }
 
         .fa-regular:hover .fa-solid{

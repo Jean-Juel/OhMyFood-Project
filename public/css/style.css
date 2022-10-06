@@ -393,7 +393,10 @@ header a {
   visibility: hidden;
 }
 .container .menu-title label input:checked ~ .fa-solid {
-  transform: scale(1.3);
+  opacity: 1;
+}
+.container .menu-title label .fa-solid {
+  opacity: 0;
   color: #FF79DA;
 }
 .container .menu-title label .fa-regular:hover .fa-solid {
@@ -855,7 +858,7 @@ header a {
   left: 73%;
   width: 8rem;
   height: 3.5rem;
-  color: #5dcb9c;
+  color: #6ba88c;
   background-color: #99E2D0;
   font-size: 1.4rem;
   padding: 1rem;
