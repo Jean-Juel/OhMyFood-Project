@@ -68,13 +68,13 @@
         left: 73%;
         width: 8rem;
         height: 3.5rem;
-        color: #171213;
+        color: #5dcb9c;
         background-color: $color-tertiary;
         font-size: 1.4rem;
         padding: 1rem;
         text-align: center;
         font-family: sans-serif;
-        border-radius: 1rem;
+        border-radius: .2rem;
         font-weight: 400;
       }
 
@@ -94,6 +94,11 @@
         box-shadow: 8px 5px 13px -5px #000000;
       }
 
+      &-link {
+        text-decoration: none;
+        color: #222;
+      }
+
         &-img {
           min-width: 45rem;
           height: 25rem;
@@ -111,14 +116,12 @@
       position: relative;
       padding: 2rem 1.5rem;
 
-         a {
-           display: inline-block;
 
             .fa-solid{
             opacity: 0;
 
 
-            &:hover {
+            &:hover, &:active {
               opacity: 1;
               color: $color-secondary;
             }
@@ -141,4 +144,3 @@
       }
     }
   }
-}
