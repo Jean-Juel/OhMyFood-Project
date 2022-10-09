@@ -145,22 +145,8 @@ span {
     opacity: 0;
     transform: scale(0);
   }
-  20% {
-    transform: scale(0.2);
-  }
-  40% {
-    transform: scale(0.4);
-  }
-  60% {
-    transform: scale(0.6);
-  }
-  80% {
-    transform: scale(0.8);
-  }
   100% {
     transform: scale(1);
-    opacity: 1;
-    animation-direction: alternate;
   }
 }
 @keyframes check {
@@ -172,6 +158,24 @@ span {
   }
   100% {
     transform: rotateZ(0deg);
+  }
+}
+@keyframes apparition-img {
+  from {
+    filter: blur(30px);
+  }
+  to {
+    filter: blur(0);
+  }
+}
+@keyframes apparition-article {
+  from {
+    transform: translateY(100px);
+    opacity: 0.4;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
   }
 }
 .btn {
@@ -195,6 +199,7 @@ span {
   -webkit-transition: opacity 1s;
   -o-transition: opacity 1s;
   transition: opacity 1s;
+  animation: 3s fade2;
 }
 .btn:hover {
   opacity: 0.5;
@@ -364,6 +369,7 @@ header a {
   width: 100%;
   max-height: 48rem;
   object-fit: cover;
+  animation: 1.5s apparition-img forwards;
 }
 .container .menu {
   position: relative;
@@ -425,6 +431,7 @@ header a {
   background-color: white;
   gap: 2rem;
   margin: 0 auto;
+  animation: 3s apparition-article forwards;
 }
 .container .menu-article h2 {
   position: relative;
@@ -602,6 +609,7 @@ header a {
   justify-content: center;
   height: auto;
   margin: 0 auto;
+  animation: 3s apparition-article forwards;
 }
 .reservation-container {
   display: flex;
@@ -794,6 +802,7 @@ header a {
 .restaurants {
   height: auto;
   padding: 2rem;
+  animation: 4s apparition-article forwards;
 }
 @media (max-width: 24.34em) {
   .restaurants {
@@ -850,6 +859,7 @@ header a {
   overflow: hidden;
   cursor: pointer;
   position: relative;
+  transition: all 0.3cs;
 }
 .restaurants-container-one:nth-child(1) .restaurants-container-one-img:before, .restaurants-container-one:nth-child(2) .restaurants-container-one-img:before {
   content: "Nouveau";
@@ -883,7 +893,8 @@ header a {
   }
 }
 .restaurants-container-one:hover {
-  box-shadow: 8px 5px 13px -5px #000000;
+  -webkit-box-shadow: 0px 10px 13px -7px #000000, 12px 20px 0px -20px rgba(0, 0, 0, 0);
+  box-shadow: 0px 10px 13px -7px #000000, 12px 20px 0px -20px rgba(0, 0, 0, 0);
 }
 .restaurants-container-one-link {
   text-decoration: none;

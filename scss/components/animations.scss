@@ -26,26 +26,9 @@
     transform: scale(0);
   }
 
-  20% {
-    transform: scale(0.2);
-  }
-
-  40% {
-    transform: scale(0.4);
-  }
-
-  60% {
-    transform: scale(0.6);
-  }
-
-  80% {
-    transform: scale(0.8);
-  }
 
   100%{
     transform: scale(1);
-    opacity: 1;
-    animation-direction: alternate;
   }
 }
 
@@ -60,5 +43,25 @@
 
   100% {
     transform: rotateZ(0deg);
+  }
+}
+
+@keyframes apparition-img {
+  from {
+    filter: blur(30px);
+  }
+  to {
+    filter: blur(0);
+  }
+}
+
+@keyframes apparition-article {
+  from {
+    transform: translateY(100px);
+    opacity: .4;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
   }
 }

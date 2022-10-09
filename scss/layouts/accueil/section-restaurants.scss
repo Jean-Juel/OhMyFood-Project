@@ -1,6 +1,8 @@
 .restaurants {
   height: auto;
   padding: 2rem;
+  animation: 4s apparition-article forwards;
+
 
   @media (max-width: 24.34em) {
     padding: 1rem;
@@ -31,6 +33,7 @@
     max-width: 100%;
     margin: 0 auto;
 
+
     @media (max-width: 37.5rem) {
       padding: 1.3rem;
     }
@@ -60,6 +63,8 @@
       overflow: hidden;
       cursor: pointer;
       position: relative;
+      transition: all .3cs;
+
 
       &:nth-child(1) &-img:before,&:nth-child(2) &-img:before {
         content: 'Nouveau';
@@ -91,8 +96,8 @@
       }
 
       &:hover {
-        box-shadow: 8px 5px 13px -5px #000000;
-      }
+        -webkit-box-shadow: 0px 10px 13px -7px #000000, 12px 20px 0px -20px rgba(0,0,0,0);
+        box-shadow: 0px 10px 13px -7px #000000, 12px 20px 0px -20px rgba(0,0,0,0);      }
 
       &-link {
         text-decoration: none;

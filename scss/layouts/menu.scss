@@ -3,10 +3,11 @@
   max-width: 90rem;
   margin: 0 auto;
 
-  &-hero {
+  &-hero { //image menu
     width: 100%;
     max-height: 48rem;
     object-fit: cover;
+    animation: 1.5s apparition-img forwards;
   }
 
   .menu {
@@ -25,8 +26,10 @@
       transition: all .3s;
       display: flex;
 
+
       h1 {
         font-family: 'Shrikhand', cursive;
+
       }
 
       label {
@@ -36,6 +39,7 @@
 
         input {
           visibility: hidden;
+
         }
 
         input:checked ~ .fa-solid {
@@ -76,6 +80,7 @@
       background-color: white;
       gap: 2rem;
       margin: 0 auto;
+      animation: 3s apparition-article forwards;
 
       h2 {
         position: relative;
