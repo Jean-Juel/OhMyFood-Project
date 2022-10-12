@@ -342,7 +342,7 @@ header {
   align-items: center;
   z-index: 50;
   background-color: white;
-  box-shadow: 10px 6px 15px -8px #000000;
+  box-shadow: 1px 3px 15px -7px #000000;
 }
 header-container {
   position: relative;
@@ -437,6 +437,7 @@ header a {
   position: relative;
   text-transform: uppercase;
   font-size: 1.8rem;
+  font-weight: 500;
 }
 .container .menu-article h2:before {
   content: "";
@@ -444,7 +445,7 @@ header a {
   top: 110%;
   left: 0;
   width: 5rem;
-  height: 0.4rem;
+  height: 0.3rem;
   background-color: #99E2D0;
   border-radius: 0.2rem;
 }
@@ -583,7 +584,7 @@ header a {
   align-items: center;
   justify-content: center;
   margin: 0 auto;
-  background-color: #F8F5F1;
+  background-color: #eaeaea;
   height: 5rem;
 }
 .localisation-container {
@@ -609,7 +610,7 @@ header a {
   justify-content: center;
   height: auto;
   margin: 0 auto;
-  animation: 3s apparition-article forwards;
+  position: relative;
 }
 .reservation-container {
   display: flex;
@@ -618,6 +619,16 @@ header a {
   flex-wrap: wrap;
   padding: 2rem;
   width: 94rem;
+}
+.reservation-container:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  background-color: #f6f6f6;
+  height: 45%;
+  z-index: -300;
+  left: 0;
+  top: 0;
 }
 @media (max-width: 774px) {
   .reservation-container {
@@ -640,13 +651,11 @@ header a {
   margin-bottom: 3rem;
 }
 .reservation-menu-btn {
-  -webkit-box-shadow: 0px 10px 13px -7px #000000, 12px 20px 0px -20px rgba(0, 0, 0, 0);
-  box-shadow: 0px 10px 13px -7px #000000, 12px 20px 0px -20px rgba(0, 0, 0, 0);
+  box-shadow: 1px 3px 15px -7px #000000;
 }
 .reservation-menu-btn {
   text-decoration: none;
   color: #FFF;
-  background-color: #FF79DA;
   padding: 1.3rem;
   border-radius: 5rem 5rem;
   font-weight: 600;
@@ -654,12 +663,12 @@ header a {
 }
 .reservation-fonc h2 {
   text-align: center;
-  padding: 2rem;
+  padding: 2rem 0 1.5rem;
 }
 @media (max-width: 57.125rem) {
   .reservation-fonc h2 {
     text-align: start;
-    margin-left: 0rem;
+    margin-left: 0;
   }
 }
 @media (max-width: 37.5em) {
@@ -720,18 +729,20 @@ header a {
     transform: scale(1);
   }
 }
+.reservation-fonc-container-btn:nth-child(3) i {
+  font-weight: 600;
+  color: #9356DC;
+}
 .reservation-fonc-container-btn:hover i {
   font-weight: 600;
   color: #9356DC;
 }
 .reservation-fonc-container-btn:hover:before {
   font-weight: 600;
-  background: -webkit-gradient(linear, right bottom, left top, from(#9356DC), to(#FF79DA));
-  background: -o-linear-gradient(bottom right, #9356DC, #FF79DA);
-  background: linear-gradient(to top left, #9356DC, #FF79DA);
+  background: #f5edff;
   -webkit-box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
   box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
-  opacity: 0.4;
+  opacity: 0.8;
 }
 @media (max-width: 57.125rem) {
   .reservation-fonc-container-btn {
@@ -756,8 +767,13 @@ header a {
   height: 5rem;
   z-index: -2;
   left: 10%;
-  box-shadow: 10px 6px 15px -8px #000000;
+  -webkit-box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
   border-radius: 2rem;
+  -webkit-transition: opacity 1s;
+  -o-transition: opacity 1s;
+  transition: opacity 1s;
+  opacity: 0.7;
 }
 @media (max-width: 57.125rem) {
   .reservation-fonc-container-btn:before {
@@ -769,6 +785,9 @@ header a {
   .reservation-fonc-container-btn:before {
     left: 0;
   }
+}
+.reservation-fonc-container-btn:nth-child(3):before {
+  background: #f5edff;
 }
 .reservation-fonc-container-btn:nth-child(2) {
   margin-right: 0.9rem;
@@ -812,7 +831,7 @@ header a {
 .restaurants h2 {
   text-align: left;
   margin-top: 4rem;
-  margin-left: 4.5rem;
+  margin-left: 1.5rem;
   padding: 2rem;
 }
 @media (max-width: 37.5em) {
@@ -826,7 +845,7 @@ header a {
   }
 }
 .restaurants-container {
-  padding: 6.5rem;
+  padding: 3.5rem 2.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -855,27 +874,27 @@ header a {
 .restaurants-container-one {
   width: 24%;
   border-radius: 2rem;
-  box-shadow: 5px 13px 32px -19px #000000;
+  box-shadow: 1px 3px 15px -7px #000000;
   overflow: hidden;
   cursor: pointer;
   position: relative;
-  transition: all 0.3cs;
+  transition: all 0.3s;
 }
 .restaurants-container-one:nth-child(1) .restaurants-container-one-img:before, .restaurants-container-one:nth-child(2) .restaurants-container-one-img:before {
   content: "Nouveau";
   position: absolute;
-  top: 10%;
-  left: 73%;
-  width: 8rem;
+  font-weight: 500;
+  top: 5%;
+  left: 75%;
+  width: 8.3rem;
   height: 3.5rem;
-  color: #6ba88c;
+  color: #13792c;
   background-color: #99E2D0;
   font-size: 1.4rem;
   padding: 1rem;
   text-align: center;
   font-family: sans-serif;
-  border-radius: 0.2rem;
-  font-weight: 400;
+  border-radius: 0.3rem;
 }
 @media (max-width: 102rem) {
   .restaurants-container-one {
@@ -889,12 +908,11 @@ header a {
 }
 @media (max-width: 24.8rem) {
   .restaurants-container-one {
-    height: 32rem;
+    height: 25rem;
   }
 }
 .restaurants-container-one:hover {
-  -webkit-box-shadow: 0px 10px 13px -7px #000000, 12px 20px 0px -20px rgba(0, 0, 0, 0);
-  box-shadow: 0px 10px 13px -7px #000000, 12px 20px 0px -20px rgba(0, 0, 0, 0);
+  box-shadow: 1px 3px 15px -3px #000000;
 }
 .restaurants-container-one-link {
   text-decoration: none;
@@ -911,11 +929,19 @@ header a {
 @media (max-width: 36rem) {
   .restaurants-container-one-img {
     min-width: auto;
+    height: 18rem;
   }
 }
 .restaurants-container-one-text {
   position: relative;
-  padding: 2rem 1.5rem;
+  padding: 1.7rem 1.5rem;
+}
+.restaurants-container-one-text h3 {
+  font-weight: 600;
+  font-size: 1.6rem;
+}
+.restaurants-container-one-text p {
+  font-size: 1.5rem !important;
 }
 .restaurants-container-one-text .fa-solid {
   opacity: 0;
@@ -933,8 +959,9 @@ header a {
 }
 @media (max-width: 34.375rem) {
   .restaurants-container-one-text i {
-    top: 40%;
+    top: 48%;
     left: 84%;
+    scale: 1.3;
   }
 }
 
