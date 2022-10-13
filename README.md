@@ -1,6 +1,7 @@
 # OhMyFood-Project
+
 Réservez le menu qui vous convient !
 
-Projet numéro 3 du Projet d'OpenClassRooms 
+## Projet numéro 3 du Projet d'OpenClassRooms 
 
-<a href="index-accueil.html"
+C'est ici pour <a href="index-accueil.html">voir le site</a>
