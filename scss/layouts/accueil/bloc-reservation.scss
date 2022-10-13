@@ -3,7 +3,7 @@
   align-items: center;
   justify-content: center;
   height: auto;
-  margin: 0 auto;
+  margin: 0 auto 5rem;
   //animation: 3s apparition-article forwards;
   position: relative;
 
@@ -73,11 +73,11 @@
 
         @media (max-width: 57.125rem) {
           text-align: start;
-          margin-left: 0;
+          margin-left: 3.4rem;
         }
 
         @media (max-width: 37.5em) {
-          margin-left: 0;
+          margin-left: 2rem;
         }
       }
 
@@ -106,6 +106,7 @@
         width: 33%;
         cursor: pointer;
         transition: all .5s;
+        font-size: 1.5rem;
 
         @media (min-width: 500px) and (max-width: 900px) {
           &-num {
@@ -165,7 +166,7 @@
         }
 
         p {
-          font-weight: 600;
+          font-weight: 500;
 
             @media (min-width: 500px) and (max-width: 900px) {
             width: 21rem;
@@ -179,6 +180,7 @@
           height: 5rem;
           z-index: -2;
           left: 10%;
+          background-color: #f6f6f6;
           -webkit-box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
           box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
           border-radius: 2rem;
@@ -188,8 +190,8 @@
           opacity: .7;
 
           @media (max-width: 57.125rem) {
-            left: 3%;
-            width: 98%;
+            left: 4%;
+            width: 95%;
           }
 
           @media (min-width: 500px) and (max-width: 900px) {

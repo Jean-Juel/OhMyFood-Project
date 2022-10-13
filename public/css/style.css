@@ -609,7 +609,7 @@ header a {
   align-items: center;
   justify-content: center;
   height: auto;
-  margin: 0 auto;
+  margin: 0 auto 5rem;
   position: relative;
 }
 .reservation-container {
@@ -668,12 +668,12 @@ header a {
 @media (max-width: 57.125rem) {
   .reservation-fonc h2 {
     text-align: start;
-    margin-left: 0;
+    margin-left: 3.4rem;
   }
 }
 @media (max-width: 37.5em) {
   .reservation-fonc h2 {
-    margin-left: 0;
+    margin-left: 2rem;
   }
 }
 .reservation-fonc-container {
@@ -701,6 +701,7 @@ header a {
   width: 33%;
   cursor: pointer;
   transition: all 0.5s;
+  font-size: 1.5rem;
 }
 @media (min-width: 500px) and (max-width: 900px) {
   .reservation-fonc-container-btn-num {
@@ -753,7 +754,7 @@ header a {
   }
 }
 .reservation-fonc-container-btn p {
-  font-weight: 600;
+  font-weight: 500;
 }
 @media (min-width: 500px) and (max-width: 900px) {
   .reservation-fonc-container-btn p {
@@ -767,6 +768,7 @@ header a {
   height: 5rem;
   z-index: -2;
   left: 10%;
+  background-color: #f6f6f6;
   -webkit-box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
   box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
   border-radius: 2rem;
@@ -777,8 +779,8 @@ header a {
 }
 @media (max-width: 57.125rem) {
   .reservation-fonc-container-btn:before {
-    left: 3%;
-    width: 98%;
+    left: 4%;
+    width: 95%;
   }
 }
 @media (min-width: 500px) and (max-width: 900px) {
@@ -822,6 +824,7 @@ header a {
   height: auto;
   padding: 2rem;
   animation: 4s apparition-article forwards;
+  background-color: #f6f6f6;
 }
 @media (max-width: 24.34em) {
   .restaurants {
