@@ -862,18 +862,6 @@ header a {
     padding: 1.3rem;
   }
 }
-.restaurants-container-one:nth-child(1) .restaurants-container-one-img {
-  background-image: url("../../../public/img/restaurants/la-palette-de-gout.jpg");
-}
-.restaurants-container-one:nth-child(2) .restaurants-container-one-img {
-  background-image: url("../../../public/img/restaurants/la-note-enchante.jpg");
-}
-.restaurants-container-one:nth-child(3) .restaurants-container-one-img {
-  background-image: url("../../../public/img/restaurants/la-francaise.jpg");
-}
-.restaurants-container-one:nth-child(4) .restaurants-container-one-img {
-  background-image: url("../../../public/img/restaurants/les-delices-du-sens.jpg");
-}
 .restaurants-container-one {
   width: 24%;
   border-radius: 2rem;
@@ -928,6 +916,12 @@ header a {
   object-fit: cover;
   background-repeat: no-repeat;
   background-position: center;
+}
+.restaurants-container-one-img img {
+  object-fit: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
 }
 @media (max-width: 36rem) {
   .restaurants-container-one-img {
