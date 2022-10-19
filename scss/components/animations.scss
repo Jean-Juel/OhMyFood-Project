@@ -1,32 +1,17 @@
 @keyframes fade {
-  from{
-   opacity: 1;
-  }
-  20% {
-    opacity: 1;
-  }
-  40% {
-    opacity: 1;
-  }
-  60% {
-    opacity: 1;
-  }
-  80% {
-    opacity: 1;
-  }
+
   100%{
-    opacity: 0;
-    visibility: hidden;
+    opacity: 0.5;
   }
 }
 
-@keyframes fade2 {
-  from{
-    opacity: 0;
-    transform: scale(0);
+@keyframes loader {
+  to {
+    transform: rotate(360deg);
   }
+}
 
-
+@keyframes hearth {
   100%{
     transform: scale(1);
   }
@@ -48,7 +33,7 @@
 
 @keyframes apparition-img {
   from {
-    filter: blur(30px);
+    filter: blur(20px);
   }
   to {
     filter: blur(0);
@@ -57,11 +42,17 @@
 
 @keyframes apparition-article {
   from {
-    transform: translateY(100px);
-    opacity: .4;
+    transform: translateY(150px);
+    opacity: 0;
   }
-  to {
+  90% {
+    background-color: #FdFdFd;
+    box-shadow: none;
+  }
+
+  100% {
     transform: translateY(0);
     opacity: 1;
+    box-shadow: 0 2px 19px -17px #000000;
   }
 }

@@ -1,16 +1,11 @@
 .localisation {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include flex;
   margin: 0 auto;
   background-color: #eaeaea;
   height: 5rem;
 
   &-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
+   @include flex;
 
     svg {
       width: 1.5rem;

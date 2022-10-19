@@ -1,9 +1,9 @@
 .restaurants {
   height: auto;
   padding: 2rem;
-  animation: 4s apparition-article forwards;
+  animation: 2.5s forwards apparition-article;
   background-color: #f6f6f6;
-
+  z-index: -1;
 
   @media (max-width: 24.34em) {
     padding: 1rem;
@@ -33,28 +33,11 @@
     gap: 2rem;
     max-width: 100%;
     margin: 0 auto;
-
+    animation: 2.5s apparition-img;
 
     @media (max-width: 37.5rem) {
       padding: 1.3rem;
     }
-
-    //&-one:nth-child(1) &-one-img {
-    //  background-image: url("../../../public/img/restaurants/la-palette-de-gout.jpg");
-    //
-    //}
-    //
-    //&-one:nth-child(2) &-one-img {
-    //  background-image: url("../../../public/img/restaurants/la-note-enchante.jpg");
-    //}
-    //
-    //&-one:nth-child(3) &-one-img {
-    //  background-image: url("../../../public/img/restaurants/la-francaise.jpg");
-    //}
-    //
-    //&-one:nth-child(4) &-one-img {
-    //  background-image: url("../../../public/img/restaurants/les-delices-du-sens.jpg");
-    //}
 
     &-one {
       width: 24%;
@@ -64,7 +47,6 @@
       cursor: pointer;
       position: relative;
       transition: all .3s;
-
 
       &:nth-child(1) &-img:before,&:nth-child(2) &-img:before {
         content: 'Nouveau';
@@ -123,7 +105,6 @@
             min-width: auto;
             height: 18rem;
           }
-
         }
 
     &-text {
@@ -131,7 +112,7 @@
       padding: 1.7rem 1.5rem;
 
       h3 {
-        font-weight: 600;
+        font-weight: $bold;
         font-size: 1.6rem;
       }
 

@@ -141,13 +141,11 @@
         }
 
         &:nth-child(3) i {
-          font-weight: 600;
-          color: #9356DC;
+          @include fonction-btn;
         }
 
         &:hover i {
-          font-weight: 600;
-          color: #9356DC;
+          @include fonction-btn;
         }
 
         &:hover:before {

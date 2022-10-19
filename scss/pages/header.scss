@@ -10,12 +10,26 @@ header {
     background-color: white;
     box-shadow: 1px 3px 15px -7px #000000;
 
-    &-container {
+    .container {
         position: relative;
         padding: 4.5rem;
-        img {
+        @include flex;
+
+        .img-s {
+            display: none;
         }
 
+        .img-b {
+            width: 60%;
+        }
+        @media (max-width: 56em) {
+            .img-b {
+                display: none;
+            }
+            .img-s {
+                display: block;
+            }
+        }
     }
 
     a {

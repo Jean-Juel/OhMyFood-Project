@@ -5,67 +5,19 @@
   height: 100%;
   opacity: 1;
   background-color: #99E2D0;
-  animation: fade 2s linear .1s forwards;
+  animation: fade 4s linear .1s forwards;
 }
-
-.spinner-container {
-  position:absolute;
-  left:50%;
-  top:50%;
-  transform:translate(-50%,-50%) scale(1.3);
+custom-loader {
+  width:50px;
+  height:50px;
+  border-radius:50%;
+  padding:1px;
+  background:conic-gradient(#0000 10%,#766DF4) content-box;
+  -webkit-mask:
+          repeating-conic-gradient(#0000 0deg,#000 1deg 20deg,#0000 21deg 36deg),
+          radial-gradient(farthest-side,#0000 calc(100% - 9px),#000 calc(100% - 8px));
+  -webkit-mask-composite: destination-in;
+  mask-composite: intersect;
+  animation:s4 1s infinite steps(10);
 }
-.spinner-container .spinner{
-  font-size:2em
-}
-.spinner-container .spinner__leter {
-  font-weight:light;
-  position:relative;
-  color:rgba(188,188,188,.25);
-  text-transform:uppercase;
-}
-.spinner-container .spinner__leter:before{
-  content:attr(letter);
-  position:absolute;
-  top:0;
-  left:0;
-  color:#333;
-  animation:load-animation 2.8s infinite;
-  animation-fill-mode:backwards;text-transform:uppercase
-}
-.spinner-container .spinner__leter:nth-child(2):before{
-  animation-delay:.4s
-}
-.spinner-container .spinner__leter:nth-child(3):before{
-  animation-delay:.8s
-}
-.spinner-container .spinner__leter:nth-child(4):before{
-  animation-delay:1.2s
-}
-.spinner-container .spinner__leter:nth-child(5):before{
-  animation-delay:1.6s
-}
-.spinner-container .spinner__leter:nth-child(6):before{
-  animation-delay:2s
-}
-.spinner-container .spinner__leter:nth-child(7):before{
-  animation-delay:2.4s
-}
-.spinner-container .spinner__leter:nth-child(8):before{
-  animation-delay:2.8s
-}
-.spinner-container .spinner__leter:nth-child(9):before{
-  animation-delay:3.2s
-}
-.spinner-container .spinner__leter:nth-child(10):before{
-  animation-delay:3.6s
-}
-@keyframes load-animation{
-  0%,80%,to{
-    transform:rotateY(-90deg);
-    opacity:0}
-  5%{opacity:.5}
-  20%,50% {
-    transform:rotateY(0)
-  ;opacity:1
-  }
-}
+@keyframes s4 {to{transform: rotate(1turn)}}
