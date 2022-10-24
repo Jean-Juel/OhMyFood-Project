@@ -8,143 +8,146 @@
     <meta name="description" content="Site de choix et compositions de menus sur 4 Restaurants">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Shrikhand&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Shrikhand&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+          integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <link rel="stylesheet" href="public/css/style.css">
     <title>OhmyFood</title>
 </head>
 <body>
-      <div class="spinner"></div>
+<div class="spinner"></div>
 
-   <header>
-       <div class="container">
-          <img class="img-s" src="public/img/logo/ohmyfood@2x.svg" alt="Logo Ohmyfood">
-          <img class="img-b" src="public/img/logo/ohmyfood.png" alt="Logo Ohmyfood">
-       </div>
-   </header>
+<header>
+    <div class="container">
+        <img class="img-s" src="public/img/logo/ohmyfood@2x.svg" alt="Logo Ohmyfood">
+        <img class="img-b" src="public/img/logo/ohmyfood.png" alt="Logo Ohmyfood">
+    </div>
+</header>
 
-   <main>
+<main>
 
-        <section class="localisation">
-            <div class="localisation-container">
-                <i class="fa-solid fa-location-dot fa-2xl"></i>
-                <p class="text-medium-more place">Paris, Belleville</p>
+    <section class="localisation">
+        <div class="localisation-container">
+            <i class="fa-solid fa-location-dot fa-2xl"></i>
+            <p class="text-medium-more place">Paris, Belleville</p>
+        </div>
+    </section>
+
+    <section class="reservation">
+
+        <div class="reservation-container">
+            <div class="reservation-menu u-margin-bottom">
+                <h1 class="reservation-menu-title title-medium">Réservez le menu qui <br> vous convient</h1>
+                <p class="text-medium">Découvrez des restaurants d'exception,<br> séléctionnés par nos soins</p>
+                <button class="btn">
+                    <a href="#restaurant">Explorer nos restaurants</a>
+                </button>
             </div>
-        </section>
 
-        <section class="reservation">
+            <div class="reservation-fonc">
+                <h2 class="reservation-fonc-title title-medium l-margin-bottom">Fonctionnement</h2>
 
-            <div class="reservation-container">
-                <div class="reservation-menu u-margin-bottom">
-                    <h1 class="reservation-menu-title title-medium">Réservez le menu qui <br> vous convient</h1>
-                    <p class="text-medium">Découvrez des restaurants d'exception,<br> séléctionnés par nos soins</p>
-                    <button class="btn">
-                        <a href="restaurant">Explorer nos restaurants</a>
-                    </button>
-                </div>
+                <div class="reservation-fonc-container">
+                    <div class="reservation-fonc-container-btn text-medium">
+                        <div class="reservation-fonc-container-btn-num">1</div>
+                        <i class="fa-solid fa-mobile-screen-button"></i>
+                        <p>Choisissez un restaurant</p>
+                    </div>
 
-                <div class="reservation-fonc">
-                    <h2 class="reservation-fonc-title title-medium l-margin-bottom">Fonctionnement</h2>
+                    <div class="reservation-fonc-container-btn text-medium">
+                        <div class="reservation-fonc-container-btn-num">2</div>
+                        <i class="fa-solid fa-list-ul"></i>
+                        <p>Composez votre menu</p>
+                    </div>
 
-                    <div class="reservation-fonc-container">
-                        <div class="reservation-fonc-container-btn text-medium">
-                            <div class="reservation-fonc-container-btn-num">1</div>
-                            <i class="fa-solid fa-mobile-screen-button"></i>
-                            <p>Choisissez un restaurant</p>
-                        </div>
-
-                        <div class="reservation-fonc-container-btn text-medium">
-                            <div class="reservation-fonc-container-btn-num">2</div>
-                            <i class="fa-solid fa-list-ul"></i>
-                            <p>Composez votre menu</p>
-                        </div>
-
-                        <div class="reservation-fonc-container-btn text-medium">
-                            <div class="reservation-fonc-container-btn-num">3</div>
-                            <i class="fa-solid fa-store"></i>
-                            <p>Dégustez au restaurant</p>
-                        </div>
+                    <div class="reservation-fonc-container-btn text-medium">
+                        <div class="reservation-fonc-container-btn-num">3</div>
+                        <i class="fa-solid fa-store"></i>
+                        <p>Dégustez au restaurant</p>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section class="restaurants" id="restaurant">
-            <h2 class="title-medium">Restaurants</h2>
+    <section class="restaurants" id="restaurant">
+        <h2 class="title-medium">Restaurants</h2>
 
-            <div class="restaurants-container">
+        <div class="restaurants-container">
 
-                <div class="restaurants-container-one">
-                    <a href="index-palette.html" target="_blank" class="restaurants-container-one-link">
+            <div class="restaurants-container-one">
+                <a href="index-palette.html" target="_blank" class="restaurants-container-one-link">
                     <div class="img-1 restaurants-container-one-img">
                         <img src="public/img/restaurants/la-palette-de-gout.jpg" alt="restaurant la Palette du goût">
                     </div>
                     <div class="restaurants-container-one-text">
                         <h3 class="title-medium-less-less">La pallete du goût</h3>
                         <p class="text-medium-less">Ménilmontant</p>
-                            <i class="fa-regular fa-heart heart fa-2xl"></i>
-                            <i class="fa-solid fa-heart fa-2xl"></i>
-                        </a>
+                        <i class="fa-regular fa-heart heart fa-2xl"></i>
+                        <i class="fa-solid fa-heart fa-2xl"></i>
                     </div>
-                </div>
+                </a>
+            </div>
 
 
-                <div class="restaurants-container-one">
-                    <a href="index-enchante.html" target="_blank" class="restaurants-container-one-link">
+            <div class="restaurants-container-one">
+                <a href="index-enchante.html" target="_blank" class="restaurants-container-one-link">
                     <div class="restaurants-container-one-img">
                         <img src="public/img/restaurants/la-note-enchante.jpg" alt="restaurant la Note Enchantée">
                     </div>
                     <div class="restaurants-container-one-text">
                         <h3 class="title-medium-less-less">La note enchantée</h3>
                         <p class="text-medium-less">Charonne</p>
-                            <i class="fa-regular fa-heart heart fa-2xl"></i>
-                            <i class="fa-solid fa-heart fa-2xl"></i>
-                        </a>
+                        <i class="fa-regular fa-heart heart fa-2xl"></i>
+                        <i class="fa-solid fa-heart fa-2xl"></i>
                     </div>
-                </div>
+                </a>
+            </div>
 
 
-                <div class="restaurants-container-one">
-                    <a href="index-francaise.html" target="_blank" class="restaurants-container-one-link">
+            <div class="restaurants-container-one">
+                <a href="index-francaise.html" target="_blank" class="restaurants-container-one-link">
                     <div class="restaurants-container-one-img">
                         <img src="public/img/restaurants/la-francaise.jpg" alt="restaurant à la Française">
                     </div>
                     <div class="restaurants-container-one-text">
                         <h3 class="title-medium-less-less">A la francaise</h3>
                         <p class="text-medium-less">Cité rouge</p>
-                            <i class="fa-regular fa-heart heart fa-2xl"></i>
-                            <i class="fa-solid fa-heart fa-2xl"></i>
-                        </a>
+                        <i class="fa-regular fa-heart heart fa-2xl"></i>
+                        <i class="fa-solid fa-heart fa-2xl"></i>
                     </div>
-                </div>
-
-
-                <div class="restaurants-container-one">
-                    <a href="index-delice.html" target="_blank" class="restaurants-container-one-link">
-                        <div class="restaurants-container-one-img">
-                            <img src="public/img/restaurants/les-delices-du-sens.jpg" alt="restaurant Le Delices des sens">
-                        </div>
-                        <div class="restaurants-container-one-text">
-                            <h3 class="title-medium-less-less">Le délice des sens</h3>
-                            <p class="text-medium-less">Folie-Méricourt</p>
-                              <i class="fa-regular fa-heart heart fa-2xl"></i>
-                              <i class="fa-solid fa-heart fa-2xl"></i>
-                        </div>
-                    </a>
-                </div>
+                </a>
             </div>
-        </section>
-    </main>
 
-   <footer class="footer">
-        <h2 class="footer-title s-margin-bottom">Ohmyfood</h2>
-        <nav class="footer-nav">
-            <a href="#" class=""><i class="fa-sharp fa-solid fa-utensils"></i> Proposer un restaurant</a>
-            <a href="#" class=""><i class="fa-solid fa-handshake-angle"></i>Devenir partenaire</a>
-            <a href="#">Mentions légales</a>
-            <a onClick="javascript:window.open('mailto:v.juhel@gorilles.fr', 'my-window');event.preventDefault()"
-               href="mailto:v.juhel@gorilles.fr">Contact</a>
-        </nav>
-    </footer>
+
+            <div class="restaurants-container-one">
+                <a href="index-delice.html" target="_blank" class="restaurants-container-one-link">
+                    <div class="restaurants-container-one-img">
+                        <img src="public/img/restaurants/les-delices-du-sens.jpg" alt="restaurant Le Delices des sens">
+                    </div>
+                    <div class="restaurants-container-one-text">
+                        <h3 class="title-medium-less-less">Le délice des sens</h3>
+                        <p class="text-medium-less">Folie-Méricourt</p>
+                        <i class="fa-regular fa-heart heart fa-2xl"></i>
+                        <i class="fa-solid fa-heart fa-2xl"></i>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <h2 class="footer-title s-margin-bottom">Ohmyfood</h2>
+    <nav class="footer-nav">
+        <a href="#" class=""><i class="fa-sharp fa-solid fa-utensils"></i> Proposer un restaurant</a>
+        <a href="#" class=""><i class="fa-solid fa-handshake-angle"></i>Devenir partenaire</a>
+        <a href="#">Mentions légales</a>
+        <a onClick="javascript:window.open('mailto:v.juhel@gorilles.fr', 'my-window');event.preventDefault()"
+           href="mailto:v.juhel@gorilles.fr">Contact</a>
+    </nav>
+</footer>
 </body>
 </html>

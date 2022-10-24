@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "sass": "sass --watch scss/main.scss public/css/style.css --style compressed --no-source-map",
-    "build": "sass --watch --include-path public/css/style.css public/css/style.css --output-style compact"
+    "build": "sass --include-path public/css/style.css public/css/style.css.min --output-style compact"
   },
   "author": "Vicktor-Juhel",
   "license": "ISC",
