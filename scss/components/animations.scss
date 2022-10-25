@@ -1,19 +1,32 @@
-@keyframes fade {
+@keyframes s-fade {
+  0% {
+    opacity: 1;
+  }
 
   100%{
     opacity: 0.5;
   }
 }
 
-@keyframes loader {
-  to {
-    transform: rotate(360deg);
+@keyframes fade-loader {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    visibility: hidden;
   }
 }
 
-@keyframes hearth {
+
+@keyframes spin{
+  0%{
+    transform: rotate(0deg);
+  }
+
   100%{
-    transform: scale(1);
+    transform: rotate(360deg);
   }
 }
 
@@ -45,13 +58,15 @@
     transform: translateY(150px);
     opacity: 0;
   }
+
   90% {
-    background-color: #FdFdFd;
+    background-color: $grey-background;
     box-shadow: none;
   }
 
   100% {
     transform: translateY(0);
+    background: $white;
     opacity: 1;
     box-shadow: 0 2px 19px -17px #000000;
   }

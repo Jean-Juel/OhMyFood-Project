@@ -4,7 +4,35 @@
   align-items: center;
 }
 
+@mixin absolute {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+@mixin text-center {
+  text-align: center;
+}
+
 @mixin fonction-btn {
   font-weight: 600;
   color: #9356DC;
+}
+
+@mixin overflow {
+  overflow: hidden;
+}
+
+@mixin cursor {
+  cursor: pointer;
+}
+
+@mixin opacity-fade {
+  opacity: 0;
+}
+
+@mixin text-ellips {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }

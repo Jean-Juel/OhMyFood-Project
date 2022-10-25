@@ -19,8 +19,6 @@
   -webkit-transition: opacity 1s;
   -o-transition: opacity 1s;
   transition: opacity 1s;
-  //animation: 3s fade2;
-
 
   &:hover {
     opacity: 0.5;
@@ -35,7 +33,7 @@
 }
 
 .btn-hearth {
-  background-color: #ffffff;
+  background-color: #f6f6f6;
   border: none;
   cursor: pointer;
   overflow: hidden;

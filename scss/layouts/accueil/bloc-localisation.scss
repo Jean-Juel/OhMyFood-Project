@@ -12,11 +12,11 @@
       height: 2rem;
     }
     p {
-      margin-left: 2rem;
+      margin-left: $margin-m;
     }
     .place {
       font-weight: 500;
-      padding: 1rem 0;
+      padding: $padding-s 0;
     }
   }
 }

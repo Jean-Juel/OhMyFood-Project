@@ -1,10 +1,10 @@
 
 .container {
   max-width: 90rem;
-  margin: 0 auto;
+  margin: $center;
 
   &-hero { //image menu
-    width: 100%;
+    width: $width-full;
     max-height: 48rem;
     object-fit: cover;
     animation: 2.5s apparition-img forwards;
@@ -12,36 +12,38 @@
 
   .menu {
     position: relative;
-    width: 100%;
-    background-color: white;
+    width: $width-full;
+    background-color: $grey-background;
+
+    @media (max-width: 431px) {
+      padding-top: 40px;
+    }
 
     &-title {
       position: absolute;
       top: -8rem;
-      width: 100%;
+      width: $width-full;
       border-radius: 7rem 7rem 0 0;
-      background-color: white;
-      padding: 3rem;
+      padding: $padding-l;
       transition: all .3s;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      
-      @media screen and (max-width: 26.5em) {
-        padding: 2.5rem;
-      }
+      background-color: $grey-background;
+
 
       h1 {
-        font-family: 'Shrikhand', cursive;
+        font-family: $font-fam;
       }
 
       .btn-hearth {
         position: relative;
-        transition: all 15s;
 
         i {
           text-decoration: none;
-          color: black;
+          color: $black;
+          background-color: #F6F6F6;
+          transition: opacity .4s;
         }
 
         svg {
@@ -51,24 +53,29 @@
           fill: $color-secondary;
           transform: scale(0);
           width: 3rem;
+          transition: all .7s;
+          
+          @media (max-width: 407px) {
+            right: 3px;
+            top: 0;
+          }
         }
 
-        @media screen and (max-width: 26.5em) {
+        @media screen and (max-width: 424px) {
           width: 4rem;
         }
 
         &:hover svg,
         &:focus svg,{
-          animation: 2.5s  forwards hearth;
+          transform: scale(1);
         }
 
         &:hover i,
         &:focus i,
         &:active i,{
-          animation: fade 1s forwards;
+          opacity: .5;
         }
       }
-
 
       i:hover + svg {
         color: $color-secondary;
@@ -80,21 +87,17 @@
       flex-direction: column;
       justify-content: center;
       align-items: flex-start;
-      padding: 2rem;
-      background-color: white;
+      padding: $padding-m;
       gap: 2rem;
-      margin: 0 auto;
+      margin: $center;
       overflow: hidden;
-
-      @media (max-width: 21.6em) {
-        padding-top: 7rem;
-      }
+      background-color: #F6F6F6;
 
       h2 {
         position: relative;
         text-transform: uppercase;
-        font-size: 1.8rem;
-        font-weight: 500;
+        font-size: $font-l;
+        font-weight: $s-bold;
 
         &:before {
           content: "";
@@ -111,13 +114,14 @@
       &-container {
         display: flex;
         flex-direction: column;
-        width: 100%;
-        cursor: pointer;
+        width: $width-full;
+        @include cursor;
         gap: 1.5rem;
 
-        @for $i from 1 through 10{
+
+        @for $i from 1 through 9{
           &-choice:nth-child(#{$i}) {
-            animation-delay: #{$i * .4s};
+            animation-delay: #{$i * .3s};
           }
         }
 
@@ -125,13 +129,18 @@
           position: relative;
           display: flex;
           justify-content: space-between;
-          width: 100%;
+          width: $width-full;
           border-radius: 1.5rem;
-          overflow: hidden;
+          @include overflow;
           transition: all .5s;
-          cursor: pointer;
-          animation: 3s forwards apparition-article;
-          opacity: 0;
+          @include cursor;
+          animation: 2s forwards apparition-article;
+          background-color: $white;
+          @include opacity-fade;
+
+          &:nth-child(1) {
+            animation-delay: .3s;
+          }
 
           i {
             font-size: 2.5rem;
@@ -140,8 +149,8 @@
           &:hover .menu-article-container-choice-check{
             transform: translateX(-70px);
             
-            @media (max-width: 25rem) {
-              width: 6rem;
+            @media (max-width: 400px) {
+              width: 5rem;
               transform: translateX(-45px);
             }
 
@@ -152,7 +161,7 @@
 
           &:hover .menu-article-container-choice-price {
             transform: translateX(-80px);
-            @media (max-width: 25rem) {
+            @media (max-width: 400px) {
               width: 6rem;
               transform: translateX(-45px);
             }
@@ -163,14 +172,12 @@
             left: 100%;
             height: 7.4rem;
             background-color: $color-tertiary;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            @include flex;
             width: 8rem;
             transition: transform .5s;
 
             i {
-              color: #ffffff;
+              color: $white;
             }
           }
 
@@ -178,39 +185,29 @@
             width: 70%;
             padding: 1.3rem;
 
-            @media (max-width: 35.375em) {
-              width: 60%;
-            }
-
-            @media (max-width: 23.75em) {
-              width: 50%;
-            }
-
-            @media (max-width: 20em) {
-              width: 35%;
-            }
-
             h3 {
-              text-overflow: ellipsis;
-              white-space: nowrap;
+              @include text-ellips;
             }
 
             p {
-              text-overflow: ellipsis;
-              white-space: nowrap;
+              @include text-ellips;
             }
           }
 
           &-price {
-            font-size: 1.8rem;
-            font-weight: 600;
+            font-size: $font-l;
+            font-weight: $bold;
             display: flex;
             align-items: flex-end;
             padding: 1.3rem;
             transition: all .5s;
           }
         }
+
       }
+    }
+    .btn-container {
+      padding: $padding-l;
     }
   }
 }
