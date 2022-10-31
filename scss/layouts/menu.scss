@@ -134,7 +134,7 @@
           @include overflow;
           transition: all .5s;
           @include cursor;
-          animation: 2s forwards apparition-article;
+          animation: 1.6s forwards apparition-article;
           background-color: $white;
           @include opacity-fade;
 
