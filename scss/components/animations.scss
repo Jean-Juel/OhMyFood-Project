@@ -36,15 +36,12 @@
 
 @keyframes check {
   from {
-    transform: rotateZ(100deg);
+    transform: rotateZ(-360deg);
   }
 
-  50% {
-    transform: rotateZ(-50deg);
-  }
 
   100% {
-    transform: rotateZ(0deg);
+    transform: rotateZ(360deg);
   }
 }
 

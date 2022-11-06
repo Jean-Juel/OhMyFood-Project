@@ -13,9 +13,14 @@
   border-radius: 100%;
   position: fixed;
   top: 50%;
-  left: 48%;
+  left: 51%;
   margin: 0 auto;
   z-index: 350;
+  transform: translate(-50%,-50%);
+
+  @media (max-width: 400px) {
+    left: 55%;
+  }
 }
 
 

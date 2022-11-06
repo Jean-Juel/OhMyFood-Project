@@ -2,20 +2,26 @@
   @include flex;
   margin: 0 auto;
   background-color: #eaeaea;
-  height: 5rem;
+  max-height: 50px;
 
   &-container {
    @include flex;
 
     svg {
-      width: 1.5rem;
-      height: 2rem;
+      width: 15px;
+      height: 20px;
     }
+
+    i {
+      font-size: 23px;
+    }
+
     p {
+      font-size: 22px;
       margin-left: $margin-m;
     }
     .place {
-      font-weight: 500;
+      font-weight: $s-bold;
       padding: $padding-s 0;
     }
   }

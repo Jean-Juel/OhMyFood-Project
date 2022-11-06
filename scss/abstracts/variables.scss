@@ -4,47 +4,60 @@ $color-tertiary: #99E2D0;
 
 $white: #ffffff;
 $black: #000000;
+$light-black: #222;
 $grey: #808080FF;
 
 $grey-background: #F6F6F6;
 
+/*-------------- BREAKPOINTS --------------*/
+$screen-xlg-min: 1920px;
+$screen-lg-max: $screen-xlg-min - 1px;
+$screen-lg-min: 1200px;
+$screen-md-max: $screen-lg-min - 1px;
+$screen-md-min: 992px;
+$screen-sm-max: $screen-md-min - 1px;
+$screen-sm-min: 768px;
+$screen-xs-max: $screen-sm-min - 1px;
+
 $font-fam: 'Shrikhand', cursive;
-
-$font-xxl: 3rem;
-$font-xl: 2rem;
-$font-l: 1.8rem;
-$font-m: 1.5rem;
-
-$padding-xxxl: 7rem;
-$padding-xxl: 5rem;
-$padding-xl: 4rem;
-$padding-l: 3rem;
-$padding-xm: 2.5rem;
-$padding-m: 2rem;
-$padding-s: 1.3rem;
-$padding-xs: 1rem;
-
-$width-full: 100%;
-
-$center: 0 auto;
-$margin-xxxl: 7rem;
-$margin-xxl: 5rem;
-$margin-xl: 4rem;
-$margin-l: 3rem;
-$margin-xm: 2.5rem;
-$margin-m: 2rem;
-$margin-s: 1rem;
-
-
-$gap-xxl: 5rem;
-$gap-xl: 3rem;
-$gap-l: 2rem;
-$gap-xm: 1.5rem;
-$gap-m: 1rem;
 
 
 $bold: 600;
 $s-bold: 500;
+
+$font-xxl: 30px;
+$font-xl: 20px;
+$font-l: 18px;
+$font-m: 16px;
+$font-s: 14px;
+
+$padding-xxxl: 70px;
+$padding-xxl: 50px;
+$padding-xl: 40px;
+$padding-l: 30px;
+$padding-xm: 25px;
+$padding-m: 20px;
+$padding-s: 13px;
+$padding-xs: 10px;
+
+$width-full: 100%;
+
+$center: 0 auto;
+
+$margin-xxxl: 70px;
+$margin-xxl: 50px;
+$margin-xl: 40px;
+$margin-l: 30px;
+$margin-xm: 25px;
+$margin-m: 20px;
+$margin-s: 10px;
+
+
+$gap-xxl: 50px;
+$gap-xl: 30px;
+$gap-l: 20px;
+$gap-xm: 15px;
+$gap-m: 10px;
 
 
 
