@@ -71,17 +71,14 @@
     max-width: 900px;
 
     h2 {
-      @include text-center;
-      padding: $padding-m 0 15px;
+      //@include text-center;
+      padding: $padding-m 0 15px 6px;
 
       @media (max-width: 915px) {
         text-align: start;
-        margin-left: 34px;
+        margin-left: 0;
       }
 
-      @media (max-width: 600px) {
-        margin-left: $margin-m;
-      }
     }
 
     &-container {
