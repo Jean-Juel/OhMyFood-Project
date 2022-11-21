@@ -105,7 +105,6 @@
         @include cursor;
         transition: all .5s;
         font-size: $font-m;
-        z-index: -2;
         background-color: $grey-background;
         box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
         transition: opacity 1s;
