@@ -117,22 +117,27 @@
         &:nth-child(3) {
           background: #f5edff;
 
-          &:hover {
-            background: $grey-background;
+          .fa-store {
+            color: $color-primary;
           }
 
-          .fa-store {
-            color: $grey;
+          &:hover {
+            background: $grey-background;
+
+            .fa-store {
+              color: $grey;
+            }
           }
         }
 
         &:hover {
           background: #f5edff;
+
+          i {
+            @include fonction-btn;
+          }
         }
 
-        &:hover i {
-          @include fonction-btn;
-        }
 
         @media (max-width: 915px) {
           gap: $gap-xl;
