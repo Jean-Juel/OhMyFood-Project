@@ -16,7 +16,7 @@
 
 @mixin fonction-btn {
   font-weight: 600;
-  color: #9356DC;
+  color: $color-primary;
 }
 
 @mixin overflow {

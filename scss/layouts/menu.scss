@@ -15,7 +15,7 @@
     width: $width-full;
     background-color: $grey-background;
 
-    @media (max-width: 450px) {
+    @media (max-width: 350px) {
       padding-top: 40px;
     }
 
@@ -55,14 +55,13 @@
 
         svg {
           @media (max-width: 420px) {
-            right: 7%;
+            right: 9%;
+            top: -3%;
           }
           @media (max-width: 350px) {
-            right: 15%;
+            right: 22%;
           }
         }
-
-
       }
     }
 

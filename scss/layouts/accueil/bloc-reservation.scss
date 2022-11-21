@@ -64,6 +64,7 @@
       border-radius: 50px 50px;
       font-weight: $bold;
       margin-top: $margin-l;
+      cursor: pointer;
     }
   }
 
@@ -77,8 +78,10 @@
       @media (max-width: 915px) {
         text-align: start;
         margin-left: 0;
-      }
+        margin-top: 30px;
+        padding: 20px 0 15px 55px;
 
+      }
     }
 
     &-container {
@@ -92,7 +95,6 @@
       @media (max-width: 915px) {
         text-align: start;
         gap: $gap-xl;
-        width: $width-full;
         margin-left: 0;
       }
 
@@ -100,65 +102,48 @@
         position: relative;
         @include flex;
         gap: $gap-m;
-        padding: 8px;
-        border-radius: 10px;
-        width: 33%;
         @include cursor;
         transition: all .5s;
         font-size: $font-m;
+        z-index: -2;
+        background-color: $grey-background;
+        box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
+        transition: opacity 1s;
+        border-radius: 20px;
+        cursor: pointer;
+        width: 31%;
+        padding: 25px 8px;
 
-        @media (max-width: 375px) {
-          padding: 0;
-        }
+        &:nth-child(3) {
+          background: #f5edff;
 
-        &:before {
-          content: "";
-          position: absolute;
-          left: 10%;
-          width: 280px;
-          height: 50px;
-          z-index: -2;
-          background-color: $grey-background;
-          -webkit-box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
-          box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
-          border-radius: 20px;
-          -webkit-transition: opacity 1s;
-          -o-transition: opacity 1s;
-          transition: opacity 1s;
-          opacity: .7;
+          &:hover {
+            background: $grey-background;
+          }
 
-          @media (max-width: 915px) {
-            width: 93%;
-            left: 3%;
+          .fa-store {
+            color: $grey;
           }
         }
 
         &:hover {
-          transform: scale(1.02);
-
-          @media (max-width: 915px) {
-            transform: scale(1);
-          }
+          background: #f5edff;
         }
 
         &:hover i {
           @include fonction-btn;
         }
 
-        &:hover:before {
-          font-weight: $bold;
-          background: #f5edff;
-          -webkit-box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
-          box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
-          opacity: .8;
+        @media (max-width: 915px) {
+          gap: $gap-xl;
+          width: 90%;
+          margin: 0 auto;
         }
 
-        @media (max-width: 915px) {
-          justify-content: start;
-          gap: $gap-xl;
-          width: $width-full;
-          margin-left: 0;
+        @media (max-width: 375px) {
+          gap: 10px;
         }
+
 
         p {
           font-weight: $s-bold;
@@ -174,11 +159,10 @@
           }
         }
 
-        &:nth-child(3):before {
-          background: #f5edff;
-        }
 
         &-num {
+          position: absolute;
+          left: -10px;
           display: flex;
           justify-content: center;
           align-items: center;
@@ -201,7 +185,7 @@
         }
 
         .fa-store {
-          color: $grey;
+          color: $color-primary;
         }
       }
     }

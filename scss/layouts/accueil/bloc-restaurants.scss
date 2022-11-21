@@ -137,6 +137,10 @@
             color: $black;
             transition: opacity .4s;
           }
+
+          &:last-child svg {
+            top: -2%;
+          }
         }
 
         i {
