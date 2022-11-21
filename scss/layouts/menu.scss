@@ -54,6 +54,8 @@
         }
 
         svg {
+          top: -1px;
+
           @media (max-width: 420px) {
             right: 9%;
             top: -3%;
